@@ -16,6 +16,12 @@ export default [
       },
     },
   },
+  {
+    plugins: {
+      // Add the react plugin
+      react: pluginReact,
+    },
+  },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommendedTypeChecked,
   pluginReact.configs.flat.recommended,
