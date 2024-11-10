@@ -24,8 +24,6 @@ export default function Layout() {
             spacing={2}
             sx={{
               alignItems: 'center',
-              mx: 3,
-              pb: 1,
               mt: { xs: 8, md: 0 },
               backgroundColor: green[100],
             }}

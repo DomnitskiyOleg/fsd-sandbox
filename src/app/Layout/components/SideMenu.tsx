@@ -5,26 +5,28 @@ import MuiDrawer, { drawerClasses } from '@mui/material/Drawer'
 import CardAlert from './CardAlert'
 import MenuContent from './MenuContent'
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
-const drawerWidth = 240
+const DRAWER_WIDTH = 240
 
 const Drawer = styled(MuiDrawer)({
-  width: drawerWidth,
-  flexShrink: 0,
+  width: DRAWER_WIDTH,
+  flexShrink: 1,
   boxSizing: 'border-box',
-  mt: 10,
+
   [`& .${drawerClasses.paper}`]: {
-    width: drawerWidth,
+    width: DRAWER_WIDTH,
     boxSizing: 'border-box',
+    backgroundColor: '#E6E6FA !important',
   },
 })
 
 export default function SideMenu() {
   const [isOpened, setIsOpened] = useState(true)
-
+  const { t, i18n } = useTranslation('common')
   return (
     <Drawer
-      open={isOpened}
+      open={true}
       variant='persistent'
       sx={{
         display: { xs: 'none', md: 'block' },
@@ -66,7 +68,7 @@ export default function SideMenu() {
             variant='body2'
             sx={{ fontWeight: 500, lineHeight: '16px' }}
           >
-            Domnitskiy Oleg
+            {t('about')}
           </Typography>
           <Link href='mailto:domnitskiy.oleg@mail.ru'>
             <Typography variant='caption' sx={{ color: 'text.secondary' }}>
