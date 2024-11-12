@@ -1,3 +1,9 @@
 {
-  "about": "Hellow"
+  "about": "Hellow",
+  "Drawer": {
+    "home": "Home",
+    "tasks": "Tasks",
+    "settings": "Settings",
+    "about": "About"
+  }
 }
