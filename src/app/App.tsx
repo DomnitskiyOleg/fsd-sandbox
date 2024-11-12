@@ -1,11 +1,11 @@
 import { ThemeProvider, CssBaseline } from '@mui/material'
-import theme from '@/shared/ui/theme'
+import { THEME } from '@/shared/ui'
 import { RouterProvider } from 'react-router-dom'
 import router from './Router'
 
 function App() {
   return (
-    <ThemeProvider theme={theme} defaultMode='dark'>
+    <ThemeProvider theme={THEME} defaultMode='dark'>
       <CssBaseline />
       <RouterProvider router={router} />
     </ThemeProvider>
