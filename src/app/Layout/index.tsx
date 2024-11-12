@@ -1,39 +1,49 @@
-import { Box, Paper, Stack } from '@mui/material'
+import { Box, Stack } from '@mui/material'
 import { Outlet } from 'react-router-dom'
 import ThemeTest from '../ThemeTest'
 import Header from './components/Header'
 import SideMenu from './components/SideMenu'
-import { green } from '@mui/material/colors'
+
 import AppNavbar from './components/AppNavbar'
+import CardAlert from './components/CardAlert'
 
 export default function Layout() {
   return (
-    <>
-      <Box sx={{ display: 'flex' }}>
-        <SideMenu />
-        <AppNavbar />
-        {/* Main content */}
-        <Box
-          component='main'
-          sx={(theme) => ({
+    <Box sx={{ display: 'flex' }}>
+      <SideMenu />
+      <AppNavbar />
+      <Header />
+      {/* Main content */}
+      <Box
+        component='main'
+        sx={(theme) => ({
+          display: 'flex',
+          flexGrow: 1,
+          minHeight: '100dvh',
+        })}
+      >
+        <Stack
+          sx={{
+            paddingTop: { xs: 1, md: 9 },
             flexGrow: 1,
+            alignItems: 'center',
+            mt: { xs: 8, md: 0 },
             overflow: 'auto',
-          })}
+          }}
         >
-          <Stack
-            spacing={2}
-            sx={{
-              alignItems: 'center',
-              mt: { xs: 8, md: 0 },
-              backgroundColor: green[100],
-            }}
-          >
-            <Header />
-            <Outlet />
-          </Stack>
-        </Box>
-        {/* Main content */}
+          <Outlet />
+          <ThemeTest />
+          <CardAlert />
+
+          <ThemeTest />
+          <ThemeTest />
+          <ThemeTest />
+          <ThemeTest />
+          <ThemeTest />
+          <ThemeTest />
+        </Stack>
       </Box>
-    </>
+      {/* Main content */}
+    </Box>
   )
 }
