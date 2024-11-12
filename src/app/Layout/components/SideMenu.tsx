@@ -1,48 +1,47 @@
 import Box from '@mui/material/Box'
 import Divider from '@mui/material/Divider'
-import { Avatar, Link, Stack, styled, Typography } from '@mui/material'
-import MuiDrawer, { drawerClasses } from '@mui/material/Drawer'
+import { Avatar, Drawer, Link, Stack, Typography } from '@mui/material'
+import { drawerClasses } from '@mui/material/Drawer'
 import CardAlert from './CardAlert'
 import MenuContent from './MenuContent'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
-const DRAWER_WIDTH = 240
+import ExtensionIcon from '@mui/icons-material/Extension'
+import MenuLink from './MenuLink'
 
-const Drawer = styled(MuiDrawer)({
-  width: DRAWER_WIDTH,
-  flexShrink: 1,
-  boxSizing: 'border-box',
-
-  [`& .${drawerClasses.paper}`]: {
-    width: DRAWER_WIDTH,
-    boxSizing: 'border-box',
-    backgroundColor: '#E6E6FA !important',
-  },
-})
+const DRAWER_WIDTH = 280
 
 export default function SideMenu() {
   const [isOpened, setIsOpened] = useState(true)
-  const { t, i18n } = useTranslation('common')
+  const { t } = useTranslation('common')
   return (
     <Drawer
-      open={true}
+      open={isOpened}
       variant='persistent'
-      sx={{
+      sx={(theme) => ({
+        p: 1,
+        pr: 2,
+        width: DRAWER_WIDTH,
         display: { xs: 'none', md: 'block' },
         [`& .${drawerClasses.paper}`]: {
-          backgroundColor: 'background.paper',
+          position: 'static',
+          backgroundColor: '#CD5434',
+          borderRadius: 2,
+          border: '1px solid',
+          borderColor: theme.palette.grey[700],
         },
-      }}
+      })}
     >
       <Box
         sx={{
           display: 'flex',
-          mt: 'calc(var(--template-frame-height, 0px) + 4px)',
-          p: 1.5,
+          alignItems: 'center',
+          height: 60,
+          pl: 2,
         }}
       >
-        {/* <SelectContent /> */}
+        <CustomIcon />
       </Box>
       <Divider />
       <MenuContent />
@@ -79,5 +78,36 @@ export default function SideMenu() {
         {/* <OptionsMenu /> */}
       </Stack>
     </Drawer>
+  )
+}
+
+export function CustomIcon() {
+  return (
+    <MenuLink to='/'>
+      <Stack direction='row' alignItems='center' spacing={1}>
+        <Box
+          sx={{
+            width: '2.5rem',
+            height: '2.5rem',
+            bgcolor: 'black',
+            borderRadius: '999px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            alignSelf: 'center',
+            backgroundImage: 'linear-gradient(135deg, #004400 0%, #259254 80%)',
+            color: 'hsla(210, 100%, 95%, 0.9)',
+            border: '1px solid',
+            borderColor: '#259254',
+            boxShadow: 'inset 0 2px 5px rgba(255, 255, 255, 0.3)',
+          }}
+        >
+          <ExtensionIcon color='inherit' sx={{ fontSize: '1.5rem' }} />
+        </Box>
+        <Typography variant='h4' fontWeight={600} textTransform='uppercase'>
+          sandbox
+        </Typography>
+      </Stack>
+    </MenuLink>
   )
 }
