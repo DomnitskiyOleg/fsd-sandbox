@@ -29,7 +29,7 @@ export default function SideMenuMobile({
         zIndex: (theme) => theme.zIndex.drawer + 1,
         [`& .${drawerClasses.paper}`]: {
           backgroundImage: 'none',
-          backgroundColor: 'background.paper',
+          backgroundColor: (theme) => theme.palette.secondary.main,
         },
       }}
     >

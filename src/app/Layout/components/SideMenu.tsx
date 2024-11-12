@@ -9,8 +9,11 @@ import { useTranslation } from 'react-i18next'
 
 import ExtensionIcon from '@mui/icons-material/Extension'
 import MenuLink from './MenuLink'
+import { PofileAvatar } from '@/shared/ui'
 
 const DRAWER_WIDTH = 280
+const BORDER_WIDTH = 2
+const BASE_SPACING = 8
 
 export default function SideMenu() {
   const [isOpened, setIsOpened] = useState(true)
@@ -20,16 +23,19 @@ export default function SideMenu() {
       open={isOpened}
       variant='persistent'
       sx={(theme) => ({
-        p: 1,
-        pr: 2,
+        position: 'fixed',
+        pl: 1,
+        pr: theme.spacing(1.5),
+        top: 8,
+        bottom: 8,
         width: DRAWER_WIDTH,
         display: { xs: 'none', md: 'block' },
         [`& .${drawerClasses.paper}`]: {
           position: 'static',
-          backgroundColor: '#CD5434',
+          backgroundColor: theme.palette.secondary.main,
           borderRadius: 2,
-          border: '1px solid',
-          borderColor: theme.palette.grey[700],
+          border: `${BORDER_WIDTH}px solid`,
+          borderColor: theme.palette.grey[600],
         },
       })}
     >
@@ -59,7 +65,7 @@ export default function SideMenu() {
         <Avatar
           sizes='small'
           alt='Riley Carter'
-          src='./src/shared/ui/assets/ava.png'
+          src={PofileAvatar}
           sx={{ width: 36, height: 36 }}
         />
         <Box sx={{ mr: 'auto' }}>
@@ -84,9 +90,9 @@ export default function SideMenu() {
 export function CustomIcon() {
   return (
     <MenuLink to='/'>
-      <Stack direction='row' alignItems='center' spacing={1}>
+      <Stack direction='row' alignItems='center' spacing={2}>
         <Box
-          sx={{
+          sx={(theme) => ({
             width: '2.5rem',
             height: '2.5rem',
             bgcolor: 'black',
@@ -95,16 +101,20 @@ export function CustomIcon() {
             justifyContent: 'center',
             alignItems: 'center',
             alignSelf: 'center',
-            backgroundImage: 'linear-gradient(135deg, #004400 0%, #259254 80%)',
+            backgroundImage: `linear-gradient(135deg, #004400 0%, ${theme.palette.primary.main} 80%)`,
             color: 'hsla(210, 100%, 95%, 0.9)',
             border: '1px solid',
             borderColor: '#259254',
             boxShadow: 'inset 0 2px 5px rgba(255, 255, 255, 0.3)',
-          }}
+          })}
         >
           <ExtensionIcon color='inherit' sx={{ fontSize: '1.5rem' }} />
         </Box>
-        <Typography variant='h4' fontWeight={600} textTransform='uppercase'>
+        <Typography
+          fontSize='1.6rem'
+          fontWeight={600}
+          textTransform='uppercase'
+        >
           sandbox
         </Typography>
       </Stack>

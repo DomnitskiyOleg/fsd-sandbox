@@ -3,45 +3,28 @@ import CardContent from '@mui/material/CardContent'
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 import TelegramIcon from '@mui/icons-material/Telegram'
-import { useTranslation } from 'react-i18next'
-import { Container, useColorScheme } from '@mui/material'
-export default function CardAlert() {
-  const { i18n } = useTranslation()
-  const { setMode, mode } = useColorScheme()
 
+export default function CardAlert() {
   return (
-    <Card elevation={10} sx={{ m: 1.5, p: 1.5 }}>
+    <Card elevation={14} sx={{ m: 1.5, p: 1.5 }}>
       <CardContent>
         <TelegramIcon color='primary' fontSize='medium' />
         <Typography gutterBottom sx={{ fontWeight: 600 }}>
-          Plan about to expire
+          Задать вопрос
         </Typography>
         <Typography variant='body2' sx={{ mb: 2, color: 'text.secondary' }}>
-          Enjoy 10% off when renewing your plan today.
+          По любым вопросам и предложениям напишите разработчику в Telegram!
         </Typography>
+
         <Button
-          onClick={() => {
-            void i18n.changeLanguage('en')
-          }}
+          component='a'
+          href='https://web.telegram.org/k/#@domnitskiy_oleg'
+          target='_blank'
           variant='contained'
           size='small'
           fullWidth
         >
-          Get ENG
-        </Button>
-        <Button
-          sx={(theme) => ({
-            marginTop: 1,
-          })}
-          onClick={() => {
-            setMode('dark')
-            void i18n.changeLanguage('ru')
-          }}
-          variant='outlined'
-          size='small'
-          fullWidth
-        >
-          Get RU
+          Связаться
         </Button>
       </CardContent>
     </Card>
