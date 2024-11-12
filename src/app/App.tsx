@@ -5,7 +5,7 @@ import router from './Router'
 
 function App() {
   return (
-    <ThemeProvider theme={theme} defaultMode='light'>
+    <ThemeProvider theme={theme} defaultMode='dark'>
       <CssBaseline />
       <RouterProvider router={router} />
     </ThemeProvider>
