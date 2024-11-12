@@ -10,37 +10,29 @@ import CardAlert from './components/CardAlert'
 export default function Layout() {
   return (
     <Box sx={{ display: 'flex' }}>
-      <SideMenu />
       <AppNavbar />
+      <SideMenu />
       <Header />
       {/* Main content */}
       <Box
         component='main'
-        sx={(theme) => ({
-          display: 'flex',
+        sx={() => ({
           flexGrow: 1,
+          pl: { xs: 0, md: '280px' },
           minHeight: '100dvh',
         })}
       >
         <Stack
           sx={{
-            paddingTop: { xs: 1, md: 9 },
             flexGrow: 1,
             alignItems: 'center',
-            mt: { xs: 8, md: 0 },
-            overflow: 'auto',
+            mt: { xs: 9, md: 10 },
           }}
         >
           <Outlet />
           <ThemeTest />
           <CardAlert />
-
-          <ThemeTest />
-          <ThemeTest />
-          <ThemeTest />
-          <ThemeTest />
-          <ThemeTest />
-          <ThemeTest />
+          <CardAlert />
         </Stack>
       </Box>
       {/* Main content */}
