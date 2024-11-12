@@ -4,10 +4,13 @@ import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 import TelegramIcon from '@mui/icons-material/Telegram'
 import { useTranslation } from 'react-i18next'
+import { Container, useColorScheme } from '@mui/material'
 export default function CardAlert() {
   const { i18n } = useTranslation()
+  const { setMode, mode } = useColorScheme()
+
   return (
-    <Card variant='outlined' sx={{ m: 1.5, p: 1.5 }}>
+    <Card elevation={10} sx={{ m: 1.5, p: 1.5 }}>
       <CardContent>
         <TelegramIcon color='primary' fontSize='medium' />
         <Typography gutterBottom sx={{ fontWeight: 600 }}>
@@ -27,8 +30,11 @@ export default function CardAlert() {
           Get ENG
         </Button>
         <Button
-          sx={{ marginTop: 1 }}
+          sx={(theme) => ({
+            marginTop: 1,
+          })}
           onClick={() => {
+            setMode('dark')
             void i18n.changeLanguage('ru')
           }}
           variant='outlined'
