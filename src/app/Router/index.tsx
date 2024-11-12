@@ -14,7 +14,10 @@ export default createBrowserRouter([
       {
         path: '/tasks',
         element: (
-          <Container sx={{ backgroundColor: 'green' }} maxWidth='xl'>
+          <Container
+            // sx={{ backgroundColor: 'green' }}
+            maxWidth='xl'
+          >
             tasks
           </Container>
         ),
