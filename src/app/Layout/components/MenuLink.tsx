@@ -3,7 +3,7 @@ import Link from '@mui/material/Link'
 
 function MenuLink({ to, children }: { to: string; children: React.ReactNode }) {
   return (
-    <Link component={RouterLink} to={to} underline='none'>
+    <Link component={RouterLink} to={to} color='white' underline='none'>
       {children}
     </Link>
   )
