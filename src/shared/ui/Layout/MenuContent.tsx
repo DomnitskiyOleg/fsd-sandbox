@@ -9,32 +9,32 @@ import AssignmentRoundedIcon from '@mui/icons-material/AssignmentRounded'
 import SettingsRoundedIcon from '@mui/icons-material/SettingsRounded'
 import InfoRoundedIcon from '@mui/icons-material/InfoRounded'
 import { useLocation } from 'react-router-dom'
-import NavLink from '../NavLink/NavLink'
 import { useTranslation } from 'react-i18next'
+import { NavLink } from '../NavLink/NavLink'
+
 
 const mainListItems = [
-  { path: '/', name: 'Home', icon: <HomeRoundedIcon /> },
-  { path: '/tasks', name: 'Tasks', icon: <AssignmentRoundedIcon /> },
+  { path: '/', name: 'home', icon: <HomeRoundedIcon /> },
+  { path: '/tasks', name: 'tasks', icon: <AssignmentRoundedIcon /> },
 ]
 
 const secondaryListItems = [
-  { path: '/settings', name: 'Settings', icon: <SettingsRoundedIcon /> },
-  { path: '/about', name: 'About', icon: <InfoRoundedIcon /> },
+  { path: '/settings', name: 'settings', icon: <SettingsRoundedIcon /> },
+  { path: '/about', name: 'about', icon: <InfoRoundedIcon /> },
 ]
 
 export default function MenuContent() {
   const { pathname } = useLocation()
-  const {  t } = useTranslation()
-
+  const { t } = useTranslation('common')
   return (
     <Stack sx={{ flexGrow: 1, p: 1, justifyContent: 'space-between' }}>
       <List dense>
-        {mainListItems.map((item, index) => (
-          <NavLink key={item.path} to={item.path}>
+        {mainListItems.map((v, index) => (
+          <NavLink key={`${v.path} + ${index}`} to={v.path}>
             <ListItem disablePadding sx={{ display: 'block' }}>
-              <ListItemButton selected={item.path === pathname}>
-                <ListItemIcon>{item.icon}</ListItemIcon>
-                <ListItemText primary={item.name} />
+              <ListItemButton selected={v.path === pathname}>
+                <ListItemIcon>{v.icon}</ListItemIcon>
+                <ListItemText primary={t(`Drawer.${v.name}`)} />
               </ListItemButton>
             </ListItem>
           </NavLink>
@@ -42,12 +42,12 @@ export default function MenuContent() {
       </List>
 
       <List dense>
-        {secondaryListItems.map((item, index) => (
-          <NavLink key={item.path} to={item.path}>
+        {secondaryListItems.map((v, index) => (
+          <NavLink key={`${v.path} + ${index}`} to={v.path}>
             <ListItem key={index} disablePadding sx={{ display: 'block' }}>
-              <ListItemButton selected={item.path === pathname}>
-                <ListItemIcon>{item.icon}</ListItemIcon>
-                <ListItemText primary={item.name} />
+              <ListItemButton selected={v.path === pathname}>
+                <ListItemIcon>{v.icon}</ListItemIcon>
+                <ListItemText primary={t(`Drawer.${v.name}`)} />
               </ListItemButton>
             </ListItem>
           </NavLink>
