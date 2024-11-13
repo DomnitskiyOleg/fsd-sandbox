@@ -3,19 +3,20 @@ import CardContent from '@mui/material/CardContent'
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 import TelegramIcon from '@mui/icons-material/Telegram'
+import { useTranslation } from 'react-i18next'
 
 export function ContactCard() {
+  const { t } = useTranslation()
   return (
     <Card elevation={14} sx={{ m: 1, p: 1.5 }}>
       <CardContent>
         <TelegramIcon color='primary' fontSize='medium' />
         <Typography gutterBottom sx={{ fontWeight: 600 }}>
-          Задать вопрос
+          {t('components.ContactCard.title')}
         </Typography>
         <Typography variant='body2' sx={{ mb: 2, color: 'text.secondary' }}>
-          По любым вопросам и предложениям напишите разработчику в Telegram!
+          {t('components.ContactCard.subtitle')}
         </Typography>
-
         <Button
           component='a'
           href='https://t.me/domnitskiy_oleg'
@@ -24,7 +25,7 @@ export function ContactCard() {
           size='small'
           fullWidth
         >
-          Связаться
+          {t('components.ContactCard.button')}
         </Button>
       </CardContent>
     </Card>

@@ -14,7 +14,7 @@ type Props = {
 }
 
 export function SideMenu(props: Props) {
-  //   next feature to add
+  //  TODO next feature to add
   //   const [isOpened, setIsOpened] = useState(true)
   const { t } = useTranslation('common')
   return (

@@ -2,12 +2,11 @@ import { DRAWER_WIDTH, DRAWER_BORDER_WIDTH } from '@/shared/config'
 import { Styles } from '@/shared/types'
 import { drawerClasses } from '@mui/material'
 
-
 const styles: Styles = {
   drawer: (theme) => ({
     position: 'fixed',
     pl: 1,
-    // calculate
+    // need 12px spacing to adjust header container and content containers
     pr: theme.spacing(1.5),
     top: 8,
     bottom: 8,
