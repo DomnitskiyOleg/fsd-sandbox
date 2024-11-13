@@ -34,7 +34,7 @@ export default function MenuContent() {
             <ListItem disablePadding sx={{ display: 'block' }}>
               <ListItemButton selected={v.path === pathname}>
                 <ListItemIcon>{v.icon}</ListItemIcon>
-                <ListItemText primary={t(`Drawer.${v.name}`)} />
+                <ListItemText primary={t(`drawer.${v.name}`)} />
               </ListItemButton>
             </ListItem>
           </NavLink>
@@ -47,7 +47,7 @@ export default function MenuContent() {
             <ListItem key={index} disablePadding sx={{ display: 'block' }}>
               <ListItemButton selected={v.path === pathname}>
                 <ListItemIcon>{v.icon}</ListItemIcon>
-                <ListItemText primary={t(`Drawer.${v.name}`)} />
+                <ListItemText primary={t(`drawer.${v.name}`)} />
               </ListItemButton>
             </ListItem>
           </NavLink>
