@@ -14,18 +14,15 @@ export function LayoutMain(props: Props) {
     <Box sx={styles.container}>
       {props.headerSlot}
       {props.sideMenuSlot}
-      {/* <AppNavbar />
-      <Header /> */}
-      {/* Main content */}
+      {/* <AppNavbar /> */}
+
       <Box component='main' sx={styles.main}>
         <Stack sx={styles.content}>
+          {/* Main content */}
           <Outlet />
-          {/* <ThemeTest />
-          <CardAlert />
-          <CardAlert /> */}
+          {/* Main content */}
         </Stack>
       </Box>
-      {/* Main content */}
     </Box>
   )
 }

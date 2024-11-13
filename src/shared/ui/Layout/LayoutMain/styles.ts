@@ -1,10 +1,11 @@
+import { DRAWER_WIDTH } from '@/shared/config'
 import { Styles } from '@/shared/types'
 
 const styles: Styles = {
   container: { display: 'flex' },
   main: {
     flexGrow: 1,
-    pl: { xs: 0, md: '280px' },
+    pl: { xs: 0, md: `${DRAWER_WIDTH}px` },
     minHeight: '100dvh',
   },
   content: {
