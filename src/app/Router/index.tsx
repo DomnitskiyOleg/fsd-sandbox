@@ -5,7 +5,7 @@ import { Container } from '@mui/material'
 export default createBrowserRouter([
   {
     path: '/',
-    element: <Layout />,
+    element: Layout,
     children: [
       {
         element: <div>Home</div>,
