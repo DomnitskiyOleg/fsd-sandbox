@@ -1,7 +1,6 @@
-import { Theme } from '@mui/material'
-import { CSSObject } from '@mui/system'
+import { getCssFunction } from '@/shared/types'
 
-const getCssStyles = ({ theme }: { theme: Theme }): CSSObject => ({
+const getCssStyles: getCssFunction = ({ theme }) => ({
   width: 62,
   height: 34,
   padding: 7,
@@ -19,7 +18,7 @@ const getCssStyles = ({ theme }: { theme: Theme }): CSSObject => ({
       },
       '& + .MuiSwitch-track': {
         opacity: 1,
-        backgroundColor: '#aab4be',
+        backgroundColor: theme.palette.background.default,
         ...theme.applyStyles('dark', {
           backgroundColor: theme.palette.background.default,
         }),
