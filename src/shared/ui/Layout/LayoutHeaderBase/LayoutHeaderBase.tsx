@@ -16,7 +16,7 @@ export function LayoutHeaderBase(props: Props) {
       <Container maxWidth='xl'>
         <Stack direction='row' sx={styles.content}>
           <NavbarBreadcrumbs />
-          <Stack direction='row' alignItems='center' gap={5}>
+          <Stack direction='row' alignItems='center' gap={2}>
             {props.switchLanguageSlot}
             {props.switchThemeSlot}
           </Stack>

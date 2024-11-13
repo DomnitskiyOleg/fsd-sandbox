@@ -1,15 +1,18 @@
+import { DRAWER_BORDER_WIDTH, DRAWER_WIDTH } from '@/shared/config'
 import { Styles } from '@/shared/types'
 
 const styles: Styles = {
   container: (theme) => ({
     display: { xs: 'none', md: 'block' },
     position: 'fixed',
-    left: 276,
-    top: 8,
+    // to adjust  header container size and make standart 8px spacing between
+    left: DRAWER_WIDTH - DRAWER_BORDER_WIDTH * 2,
+    top: theme.spacing(1),
     right: 0,
     zIndex: 999,
     borderRadius: 2,
-    border: '2px solid',
+    borderWidth: DRAWER_BORDER_WIDTH,
+    borderStyle: 'solid',
     borderColor: theme.palette.grey[600],
     backgroundColor: theme.palette.secondary.main,
   }),
