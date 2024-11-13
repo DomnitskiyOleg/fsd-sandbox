@@ -9,7 +9,7 @@ type Props = {
   color?: string
 }
 
-export default function NavLink({ color = 'white', ...restProps }: Props) {
+export function NavLink({ color = 'white', ...restProps }: Props) {
   const { i18n } = useTranslation()
   const locale = i18n.language
 
