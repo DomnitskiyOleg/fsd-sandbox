@@ -1,9 +1,16 @@
 {
   "developer": "Домницкий Олег",
-  "Drawer": {
+  "drawer": {
     "home": "Главная",
     "tasks": "Задачи",
     "settings": "Настройки",
     "about": "О проекте"
+  },
+  "components": {
+    "ContactCard": {
+      "title": "Задать вопрос",
+      "subtitle": "По любым вопросам и предложениям напишите разработчику в Telegram!",
+      "button": "Связаться"
+    }
   }
 }

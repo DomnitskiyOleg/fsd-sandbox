@@ -1,9 +1,16 @@
 {
   "developer": "Domnitskiy Oleg",
-  "Drawer": {
+  "drawer": {
     "home": "Home",
     "tasks": "Tasks",
     "settings": "Settings",
     "about": "About"
+  },
+  "components": {
+    "ContactCard": {
+      "title": "Ask a Question",
+      "subtitle": "For any questions and suggestions, contact the developer on Telegram!",
+      "button": "Contact"
+    }
   }
 }
