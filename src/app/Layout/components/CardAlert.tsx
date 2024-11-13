@@ -18,7 +18,7 @@ export default function CardAlert() {
 
         <Button
           component='a'
-          href='https://web.telegram.org/k/#@domnitskiy_oleg'
+          href='https://t.me/domnitskiy_oleg'
           target='_blank'
           variant='contained'
           size='small'
