@@ -1,1 +1,1 @@
-export type { Styles } from './styles'
+export type { Styles, getCssFunction } from './styles'
