@@ -18,6 +18,7 @@ export default async () => {
     .init({
       fallbackLng: 'en',
       debug: true,
+      defaultNS: 'common',
       backend: {
         loadPath: 'src/shared/locales/{{lng}}/{{ns}}.json',
       },
