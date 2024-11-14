@@ -1,7 +1,6 @@
-import { Theme } from '@mui/material'
-import { CSSObject } from '@mui/system'
+import { getCssFunction } from '@/shared/types'
 
-const getCssStyles = ({ theme }: { theme: Theme }): CSSObject => ({
+const getCssStyles: getCssFunction = ({ theme }) => ({
   width: 62,
   height: 34,
   padding: 7,

@@ -5,7 +5,7 @@ import styles from './styles'
 
 type Props = {
   headerSlot?: ReactNode
-  mobileDrawer?: ReactNode
+  appNavbarSlot?: ReactNode
   sideMenuSlot?: ReactNode
 }
 
@@ -14,8 +14,7 @@ export function LayoutMain(props: Props) {
     <Box sx={styles.container}>
       {props.headerSlot}
       {props.sideMenuSlot}
-      {/* <AppNavbar /> */}
-
+      {props.appNavbarSlot}
       <Box component='main' sx={styles.main}>
         <Stack sx={styles.content}>
           {/* Main content */}

@@ -6,12 +6,12 @@ import { NavLink } from '../NavLink/NavLink'
 export function BrandLogo() {
   return (
     <NavLink to='/'>
-      <Stack direction='row' alignItems='center' spacing={2}>
+      <Stack direction='row' alignItems='center' spacing={{ xs: 1, md: 2 }}>
         <Box sx={styles.logo}>
           <ExtensionIcon color='inherit' sx={{ fontSize: '1.5rem' }} />
         </Box>
         <Typography
-          fontSize='1.6rem'
+          fontSize={{ xs: '1.2rem', md: '1.6rem' }}
           fontWeight={600}
           textTransform='uppercase'
         >

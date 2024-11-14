@@ -12,5 +12,8 @@
       "subtitle": "For any questions and suggestions, contact the developer on Telegram!",
       "button": "Contact"
     }
+  },
+  "actions": {
+    "logout": "Logout"
   }
 }

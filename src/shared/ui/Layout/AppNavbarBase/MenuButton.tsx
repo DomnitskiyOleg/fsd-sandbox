@@ -9,6 +9,7 @@ export default function MenuButton({
   showBadge = false,
   ...props
 }: MenuButtonProps) {
+  
   return (
     <Badge
       color='error'
