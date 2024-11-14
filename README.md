@@ -2,6 +2,8 @@
 
 ## About
 
+This is FSD based platform for completing test assignments.
+Will completed soon...
 
 ## Features
 
