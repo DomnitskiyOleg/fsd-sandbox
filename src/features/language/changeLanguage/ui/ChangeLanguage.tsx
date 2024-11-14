@@ -10,9 +10,7 @@ export function ChangeLanguage() {
   const { i18n } = useTranslation()
   const locale = i18n.language
   return (
-    <Paper
-      sx={{ backgroundColor: 'transparent', borderRadius: 4 }}
-    >
+    <Paper sx={{ backgroundColor: 'transparent', borderRadius: 4 }}>
       <CustomSwitch
         checked={locale === 'ru'}
         onClick={() => {
