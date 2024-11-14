@@ -9,6 +9,7 @@ import { ReactNode } from 'react'
 import styles from './styles'
 import MenuContent from '@/shared/ui/Layout/MenuContent'
 import { useTranslation } from 'react-i18next'
+import { Box } from '@mui/material'
 
 type Props = {
   contactCard?: ReactNode
@@ -42,9 +43,9 @@ export function SideMenuMobile(props: Props) {
         <Divider />
         <Stack sx={{ flexGrow: 1 }}>
           <MenuContent />
-          <Divider />
         </Stack>
-        {props.contactCard}
+        <Box>{props.contactCard}</Box>
+        <Divider />
         <Stack sx={{ p: 2, px: 1 }}>
           <Button
             variant='outlined'
@@ -52,7 +53,7 @@ export function SideMenuMobile(props: Props) {
             fullWidth
             startIcon={<LogoutRoundedIcon />}
           >
-            Logout
+            {t('actions.logout')}
           </Button>
         </Stack>
       </Stack>

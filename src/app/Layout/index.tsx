@@ -8,6 +8,6 @@ export default (
   <LayoutMain
     headerSlot={LayoutHeader}
     sideMenuSlot={<SideMenu contactCardSlot={<ContactCard />} />}
-    appNavbar={<AppNavbar />}
+    appNavbarSlot={<AppNavbar />}
   />
 )
