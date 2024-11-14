@@ -7,7 +7,7 @@ async function initApp() {
   
   await initTranslations()
 
-  // После завершения инициализации i18n рендер приложения
+  // render after i18n initialization
   createRoot(document.getElementById('root')!).render(
     <StrictMode>
       <App />
@@ -15,5 +15,5 @@ async function initApp() {
   )
 }
 
-// Запуск инициализацию приложения
+// launch app
 void initApp()

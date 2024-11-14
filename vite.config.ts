@@ -10,8 +10,8 @@ export default defineConfig({
     viteStaticCopy({
       targets: [
         {
-          src: 'src/shared/locales', // Откуда копируем
-          dest: 'static', // Куда копируем в папке сборки
+          src: 'src/shared/locales', // to copy locales
+          dest: 'static', // path to copy. example fetch('static/locales/ru/common.json')
         },
       ],
     }),
