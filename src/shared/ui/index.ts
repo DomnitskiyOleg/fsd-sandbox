@@ -1,6 +1,3 @@
-import PofileAvatar from './assets/ava.png'
-
-export { PofileAvatar }
 export { LayoutMain } from './Layout'
 export { THEME } from './theme/theme'
 export { BrandLogo } from './BrandLogo/BrandLogo'

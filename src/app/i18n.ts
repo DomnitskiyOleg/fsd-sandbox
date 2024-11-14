@@ -20,7 +20,7 @@ export default async () => {
       debug: true,
       defaultNS: 'common',
       backend: {
-        loadPath: 'src/shared/locales/{{lng}}/{{ns}}.json',
+        loadPath: 'static/locales/{{lng}}/{{ns}}.json',
       },
     })
 }
