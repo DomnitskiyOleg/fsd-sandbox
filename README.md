@@ -26,4 +26,4 @@ Will completed soon...
 
 ## Getting started
 
-Try it ! <a href="https://fsd-sandbox.vercel.app/" style="color: green;">Зелёная ссылка</a>
+Try it ! <a href="https://fsd-sandbox.vercel.app/" style="color: green;">FSD SANDBOX</a>
