@@ -5,7 +5,7 @@ import { Avatar, Drawer, Link, Stack, Typography } from '@mui/material'
 import { ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
 
-import { BrandLogo, PofileAvatar } from '@/shared/ui'
+import { BrandLogo } from '@/shared/ui'
 import MenuContent from '@/shared/ui/Layout/MenuContent'
 import styles from './styles'
 
@@ -29,7 +29,7 @@ export function SideMenu(props: Props) {
         <Avatar
           sizes='small'
           alt={t('developer')}
-          src={PofileAvatar}
+          src='/assets/ava.png'
           sx={styles.avatar}
         />
         <Box sx={{ mr: 'auto' }}>
