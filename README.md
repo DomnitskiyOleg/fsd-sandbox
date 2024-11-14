@@ -7,7 +7,6 @@ Will completed soon...
 
 ## Features
 
-
 ## Technology stack
 
 [![Vite][shields-vite-domain]](https://vitejs.dev/) </br>
@@ -25,6 +24,6 @@ Will completed soon...
 [shields-react-domain]: https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB
 [shields-redux-domain]: https://img.shields.io/badge/redux_toolkit-%2320232a.svg?style=for-the-badge&logo=redux&logoColor=%764abc
 
-
 ## Getting started
 
+Try it ! <a href="https://fsd-sandbox.vercel.app/" style="color: green;">Зелёная ссылка</a>
