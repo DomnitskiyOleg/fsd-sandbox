@@ -13,7 +13,7 @@ const getCssStyles = ({ theme }: { theme: Theme }): CSSObject => ({
       color: '#fff',
       transform: 'translateX(22px)',
       '& .MuiSwitch-thumb:before': {
-        backgroundImage: `url('/src/shared/ui/assets/flag-ru.svg')`,
+        backgroundImage: `url('/assets/flag-ru.svg')`,
       },
       '& + .MuiSwitch-track': {
         opacity: 1,
@@ -37,7 +37,7 @@ const getCssStyles = ({ theme }: { theme: Theme }): CSSObject => ({
       top: 0,
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center',
-      backgroundImage: `url('/src/shared/ui/assets/flag-en.svg')`,
+      backgroundImage: `url('/assets/flag-en.svg')`,
     },
     ...theme.applyStyles('dark', {
       backgroundColor: theme.palette.primary.dark,
