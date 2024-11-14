@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import App from './App'
 import initTranslations from './i18n'
 
-await initTranslations()
+void initTranslations()
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
