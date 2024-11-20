@@ -1,6 +1,8 @@
 import { createBrowserRouter } from 'react-router-dom'
 import Layout from '../Layout'
 import { Container } from '@mui/material'
+import { NotFoundPage } from '@/pages/notFound'
+
 
 export default createBrowserRouter([
   {
@@ -25,6 +27,10 @@ export default createBrowserRouter([
       {
         path: '/about',
         element: <div>developer</div>,
+      },
+      {
+        path: '*',
+        element: <NotFoundPage />,
       },
     ],
   },

@@ -45,7 +45,6 @@ export function SideMenu(props: Props) {
             </Typography>
           </Link>
         </Box>
-        {/* <OptionsMenu /> */}
       </Stack>
     </Drawer>
   )

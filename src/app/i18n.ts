@@ -18,7 +18,7 @@ export default async () => {
     .init({
       fallbackLng: 'en',
       debug: true,
-      ns: ['common'], // namespaces (can set [])
+      ns: ['common', 'not-found'], // namespaces (can set [])
       defaultNS: 'common',
       backend: {
         loadPath: 'static/locales/{{lng}}/{{ns}}.json',
