@@ -4,6 +4,7 @@ import { Styles } from '@/shared/types'
 const styles: Styles = {
   container: { display: 'flex' },
   main: {
+    display: 'flex',
     flexGrow: 1,
     pl: { xs: 0, md: `${DRAWER_WIDTH}px` },
     minHeight: '100dvh',
