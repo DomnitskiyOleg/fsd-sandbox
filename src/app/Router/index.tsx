@@ -2,7 +2,7 @@ import { createBrowserRouter } from 'react-router-dom'
 import Layout from '../Layout'
 import { Container } from '@mui/material'
 import { NotFoundPage } from '@/pages/notFound'
-
+import { TasksPage } from '@/pages/tasks'
 
 export default createBrowserRouter([
   {
@@ -15,14 +15,7 @@ export default createBrowserRouter([
       },
       {
         path: '/tasks',
-        element: (
-          <Container
-            // sx={{ backgroundColor: 'green' }}
-            maxWidth='xl'
-          >
-            tasks
-          </Container>
-        ),
+        element: <TasksPage />,
       },
       {
         path: '/about',
