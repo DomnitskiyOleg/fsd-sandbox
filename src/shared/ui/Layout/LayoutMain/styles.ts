@@ -7,6 +7,7 @@ const styles: Styles = {
     display: 'flex',
     flexGrow: 1,
     pl: { xs: 0, md: `${DRAWER_WIDTH}px` },
+    pb: 1,
     minHeight: '100dvh',
   },
   content: {

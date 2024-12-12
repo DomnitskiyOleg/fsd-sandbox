@@ -4,6 +4,7 @@ import Breadcrumbs, { breadcrumbsClasses } from '@mui/material/Breadcrumbs'
 import NavigateNextRoundedIcon from '@mui/icons-material/NavigateNextRounded'
 import { useLocation } from 'react-router-dom'
 import { NavLink } from '../..'
+import { useTranslation } from 'react-i18next'
 
 const StyledBreadcrumbs = styled(Breadcrumbs)(({ theme }) => ({
   [`& .${breadcrumbsClasses.separator}`]: {
@@ -17,7 +18,7 @@ const StyledBreadcrumbs = styled(Breadcrumbs)(({ theme }) => ({
 
 export default function NavbarBreadcrumbs() {
   const { pathname } = useLocation()
-
+  const { t } = useTranslation()
   const breadcrumbs = pathname.split('/')
   return (
     <StyledBreadcrumbs
@@ -25,7 +26,7 @@ export default function NavbarBreadcrumbs() {
       separator={<NavigateNextRoundedIcon fontSize='small' />}
     >
       <NavLink to='/'>
-        <Typography fontWeight={500}  variant='body1'>
+        <Typography fontWeight={500} variant='body1'>
           Sandbox
         </Typography>
       </NavLink>
@@ -39,7 +40,7 @@ export default function NavbarBreadcrumbs() {
               variant='body1'
               color='white'
             >
-              {v}
+              {t(`drawer.${v}`)}
             </Typography>
           </NavLink>
         ))}

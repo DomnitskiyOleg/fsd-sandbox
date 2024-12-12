@@ -1,119 +1,102 @@
+import { Box, Container, Stack } from '@mui/material'
 import {
-  Box,
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-  Container,
-  Divider,
-  Link,
-  Stack,
-  Typography,
-} from '@mui/material'
-
+  DragDropContext,
+  Droppable,
+  Draggable,
+  DropResult,
+} from '@hello-pangea/dnd'
 import { useSelector } from 'react-redux'
+import {
+  FilteredTasks,
+  selectTasks,
+  TaskStatus,
+} from '@/app/Store/slices/tasksSlice'
 
-import dayjs from 'dayjs'
-import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined'
-import { selectTasks } from '@/app/Store/slices/tasksSlice'
-import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined'
+import { useMemo } from 'react'
+import { TaskCard } from './Card'
 
-import { DEVELOPER_CONTACTS } from '@/shared/config'
-import { green } from '@mui/material/colors'
-import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked'
-import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined'
+const STATUSES = Object.values(TaskStatus)
 
 export function TasksKanban() {
   const tasks = useSelector(selectTasks)
 
+  const filteredTasks = useMemo(() => {
+    const res: FilteredTasks = {
+      todo: [],
+      inProgress: [],
+      done: [],
+    }
+
+    Object.values(TaskStatus).forEach((status) => {
+      res[status] = [...tasks.filter((v) => v.status === status)].sort(
+        (a, b) => {
+          if (a.position > b.position) return 1
+          if (a.position < b.position) return -1
+          return 0
+        },
+      )
+    })
+
+    return res
+  }, [tasks])
+
   return (
-    <Container sx={{ mt: 4 }} maxWidth='xl'>
-      <Box display='flex' mt={5} gap={1} flexDirection='row'>
-        {tasks.map((v) => (
-          <Card
-            elevation={10}
-            sx={{
-              p: 1,
-              borderLeftWidth: 10,
-              borderLeftStyle: 'solid',
-              borderColor: green[200],
-            }}
-            key={v.id}
+    <Container>
+      <div style={{ display: 'flex', width: 600, overflow: 'scroll' }}>
+        <DragDropContext onDragEnd={() => {}}>
+          <Stack
+            flexDirection='row'
+            minWidth={900}
+            sx={{ overflow: 'auto' }}
+            gap={1}
           >
-            <CardContent>
-              <Stack
-                direction='row'
-                alignItems='center'
-                justifyContent='space-between'
-              >
-                <Typography gutterBottom variant='h6' component='div'>
-                  {v.name}
-                </Typography>
-
-                {v.completeBefore && (
-                  <Stack flexDirection='row' alignItems='center' gap={1}>
-                    <NotificationsOutlinedIcon fontSize='small' />
-                    <Typography gutterBottom variant='body2' mb={0}>
-                      {dayjs(v.completeBefore).format('DD/MM/YYYY')}
-                    </Typography>
-                  </Stack>
-                )}
-              </Stack>
-              <Divider />
-              <Stack gap={2} py={2}>
-                <Stack gap={1} alignItems='center' flexDirection='row'>
-                  <PersonOutlineOutlinedIcon color='primary' />
-                  <Link underline='none' href='mailto:domnitskiy.oleg@mail.ru'>
-                    <Typography
-                      variant='body2'
-                      mb={0}
-                      sx={{ color: 'text.secondary' }}
-                      component='div'
-                    >
-                      {DEVELOPER_CONTACTS.email}
-                    </Typography>
-                  </Link>
+            {STATUSES.map((v, i) => (
+              <Box key={v} flex={1} position='relative'>
+                <Stack key={v} flexDirection='column'>
+                  <Box
+                    alignItems='center'
+                    p={2}
+                    border={1}
+                    borderBottom={0}
+                    borderRadius={1}
+                    justifyContent='space-between'
+                  >
+                    {v}
+                  </Box>
+                  <Droppable droppableId={v}>
+                    {(providedDrop) => (
+                      <div
+                        ref={providedDrop.innerRef}
+                        style={{ padding: 10, backgroundColor: 'blue' }}
+                      >
+                        {filteredTasks[v].map((task, index) => (
+                          <Draggable
+                            key={task.id}
+                            draggableId={task.id}
+                            index={index}
+                            isDragDisabled={false}
+                          >
+                            {(provided, snapshot) => (
+                              <div
+                                ref={provided.innerRef}
+                                {...provided.draggableProps}
+                                {...provided.dragHandleProps}
+                              >
+                                <TaskCard task={task} />
+                              </div>
+                            )}
+                          </Draggable>
+                        ))}
+                        {providedDrop.placeholder}
+                      </div>
+                    )}
+                  </Droppable>
                 </Stack>
-                <Typography
-                  variant='body2'
-                  sx={{ color: 'text.secondary' }}
-                  lineHeight={1.6}
-                  component='div'
-                >
-                  {v.description}
-                </Typography>
-              </Stack>
-
-              <Divider />
-            </CardContent>
-            <CardActions
-              sx={{
-                display: 'flex',
-                flexDirection: 'row',
-                justifyContent: 'space-between',
-                gap: 1,
-              }}
-            >
-              <Button
-                fullWidth
-                variant='outlined'
-                endIcon={<RadioButtonUncheckedIcon />}
-                size='small'
-              >
-                Завершить
-              </Button>
-              <Button
-                fullWidth
-                variant='contained'
-                endIcon={<DeleteOutlineOutlinedIcon />}
-                size='small'
-              >
-                Удалить
-              </Button>
-            </CardActions>
-          </Card>
-        ))}
-      </Box>
+              </Box>
+            ))}
+          </Stack>
+        </DragDropContext>
+      </div>
     </Container>
   )
 }

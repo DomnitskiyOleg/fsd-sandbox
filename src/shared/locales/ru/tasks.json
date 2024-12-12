@@ -1,0 +1,13 @@
+{
+  "title": "Tasks",
+  "AddTaskForm": {
+    "nameLabel": "Название задачи",
+    "descriptionLabel": "Описание",
+    "dateLabel": "Выполнить до",
+    "addButton": "Добавить",
+    "resetButton": "Сбросить"
+  },
+  "TaskCard": {
+    "noDescription": "Нет описания"
+  }
+}
