@@ -4,7 +4,6 @@ import App from './App'
 import initTranslations from './i18n'
 
 async function initApp() {
-  
   await initTranslations()
 
   // render after i18n initialization
@@ -16,4 +15,4 @@ async function initApp() {
 }
 
 // launch app
-void initApp()
+initApp()
