@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
 import middleware from './middleware'
-import tasksReducer from './slices/tasksSlice'
+import { tasksReducer } from '@/entities/task'
 
 export const store = configureStore({
   reducer: {
