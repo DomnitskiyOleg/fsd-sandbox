@@ -42,7 +42,12 @@ export default [
       'import/extensions': 'off',
       '@typescript-eslint/no-unused-vars': 'off',
       '@typescript-eslint/no-throw-literal': 'off',
-      'no-unused-vars': 'off',
+      '@typescript-eslint/no-floating-promises': 'off',
+      '@typescript-eslint/no-misused-promises': 'off',
+      'no-unused-vars': [
+        'warn',
+        { argsIgnorePattern: '^_', varsIgnorePattern: 'TaskStatus' },
+      ],
       'no-console': 'warn',
       'no-return-assign': 'off',
     },
