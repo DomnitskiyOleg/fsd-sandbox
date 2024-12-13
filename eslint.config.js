@@ -44,10 +44,7 @@ export default [
       '@typescript-eslint/no-throw-literal': 'off',
       '@typescript-eslint/no-floating-promises': 'off',
       '@typescript-eslint/no-misused-promises': 'off',
-      'no-unused-vars': [
-        'warn',
-        { argsIgnorePattern: '^_', varsIgnorePattern: 'TaskStatus' },
-      ],
+      'no-unused-vars': 'off',
       'no-console': 'warn',
       'no-return-assign': 'off',
     },
