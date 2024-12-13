@@ -8,6 +8,7 @@ import { useTranslation } from 'react-i18next'
 import { BrandLogo } from '@/shared/ui'
 import MenuContent from '@/shared/ui/Layout/MenuContent'
 import styles from './styles'
+import { DEVELOPER_CONTACTS } from '@/shared/config'
 
 type Props = {
   contactCardSlot?: ReactNode
@@ -41,7 +42,7 @@ export function SideMenu(props: Props) {
           </Typography>
           <Link underline='none' href='mailto:domnitskiy.oleg@mail.ru'>
             <Typography variant='caption' sx={{ color: 'text.secondary' }}>
-              domnitskiy.oleg@mail.ru
+              {DEVELOPER_CONTACTS.email}
             </Typography>
           </Link>
         </Box>

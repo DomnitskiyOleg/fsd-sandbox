@@ -1,0 +1,1 @@
+export { useMobileQuery } from './useMobileQuery'

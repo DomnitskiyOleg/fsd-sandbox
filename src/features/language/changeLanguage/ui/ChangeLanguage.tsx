@@ -14,7 +14,7 @@ export function ChangeLanguage() {
       <CustomSwitch
         checked={locale === 'ru'}
         onClick={() => {
-          void i18n.changeLanguage(locale === 'ru' ? 'en' : 'ru')
+          i18n.changeLanguage(locale === 'ru' ? 'en' : 'ru')
         }}
       />
     </Paper>

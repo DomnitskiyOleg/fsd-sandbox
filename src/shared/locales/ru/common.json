@@ -15,5 +15,8 @@
   },
   "actions": {
     "logout": "Выйти"
+  },
+  "validation": {
+    "required": "Обязательное поле"
   }
 }

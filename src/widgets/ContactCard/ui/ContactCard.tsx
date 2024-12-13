@@ -11,10 +11,14 @@ export function ContactCard() {
     <Card elevation={14} sx={{ m: 1, p: 1.5 }}>
       <CardContent>
         <TelegramIcon color='primary' fontSize='medium' />
-        <Typography gutterBottom sx={{ fontWeight: 600 }}>
+        <Typography mb={1} sx={{ fontWeight: 600 }}>
           {t('components.ContactCard.title')}
         </Typography>
-        <Typography variant='body2' sx={{ mb: 2, color: 'text.secondary' }}>
+        <Typography
+          lineHeight={1.5}
+          variant='body2'
+          sx={{ mb: 2, color: 'text.secondary' }}
+        >
           {t('components.ContactCard.subtitle')}
         </Typography>
         <Button

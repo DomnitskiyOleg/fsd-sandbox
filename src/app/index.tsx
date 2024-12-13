@@ -15,4 +15,4 @@ async function initApp() {
 }
 
 // launch app
-void initApp()
+initApp()

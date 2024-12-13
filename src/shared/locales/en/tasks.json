@@ -1,0 +1,13 @@
+{
+  "title": "Tasks",
+  "AddTaskForm": {
+    "nameLabel": "Task name",
+    "descriptionLabel": "Description",
+    "dateLabel": "Complete by",
+    "addButton": "Add",
+    "resetButton": "Reset"
+  },
+  "TaskCard": {
+    "noDescription": "No description"
+  }
+}
