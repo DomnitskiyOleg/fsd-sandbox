@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next'
 export function ContactCard() {
   const { t } = useTranslation()
   return (
-    <Card elevation={14} sx={{ m: 1, p: 1.5 }}>
+    <Card elevation={4} sx={{ m: 1, p: 1.5 }}>
       <CardContent>
         <TelegramIcon color='primary' fontSize='medium' />
         <Typography mb={1} sx={{ fontWeight: 600 }}>
