@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { NavLink } from '@/shared/ui'
 
 export function NotFoundPage() {
-  const { t } = useTranslation('not-found')
+  const { t } = useTranslation()
   return (
     <Container
       maxWidth='xl'
@@ -27,25 +27,25 @@ export function NotFoundPage() {
         />
         <Typography
           textTransform='uppercase'
-          sx={(theme) => ({
-            mt: theme.spacing(2),
-          })}
-          variant='h3'
+          sx={{
+            mt: 2,
+          }}
+          variant='h4'
           textAlign='center'
         >
-          {t('title')}
+          {t('pages.notFound.title')}
         </Typography>
         <Typography
-          sx={(theme) => ({
-            mt: theme.spacing(2),
-            mb: theme.spacing(2),
-          })}
+          sx={{
+            mt: 2,
+            mb: 2,
+          }}
           textAlign='center'
         >
-          {t('subtitle')}
+          {t('pages.notFound.subtitle')}
         </Typography>
         <NavLink to='/'>
-          <Button variant='outlined'>{t('backButton')}</Button>
+          <Button variant='outlined'>{t('pages.notFound.backButton')}</Button>
         </NavLink>
       </Box>
     </Container>
