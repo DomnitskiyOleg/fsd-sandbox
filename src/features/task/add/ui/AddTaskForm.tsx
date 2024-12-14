@@ -7,7 +7,7 @@ import { Dayjs } from 'dayjs'
 import { ReactNode, useCallback, useState } from 'react'
 import RestartAltOutlinedIcon from '@mui/icons-material/RestartAltOutlined'
 import AddBoxOutlinedIcon from '@mui/icons-material/AddBoxOutlined'
-import { useMobileQuery } from '@/shared/lib'
+import { useDeviceQuery } from '@/shared/lib'
 import { useTranslation } from 'react-i18next'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import { useDispatch } from 'react-redux'
@@ -23,7 +23,7 @@ export function AddTaskForm() {
   const { t } = useTranslation('tasks')
   const { t: commonT } = useTranslation()
 
-  const { isMobile, isMedium } = useMobileQuery()
+  const { isMobile, isMedium } = useDeviceQuery()
   const dispatch = useDispatch()
 
   const [date, setDate] = useState<Dayjs | null>(null)
