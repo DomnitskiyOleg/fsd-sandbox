@@ -9,7 +9,6 @@ const styles: Styles = {
     p: 1,
     borderLeftWidth: 10,
     borderLeftStyle: 'solid',
-    borderColor: blue[200],
   },
   content: { display: 'flex', flexDirection: 'column', flex: 1 },
   title: {

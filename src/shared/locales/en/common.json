@@ -13,6 +13,18 @@
       "button": "Contact"
     }
   },
+  "pages": {
+    "notFound": {
+      "title": "Page not found",
+      "subtitle": "Oops! We can't seem to find the page you‘re looking for.",
+      "backButton": "To Main"
+    },
+    "developing": {
+      "title": "Something amazing is coming soon",
+      "subtitle": "We are hard at work on this page. Thank you for your patience!",
+      "backButton": "To Main"
+    }
+  },
   "actions": {
     "logout": "Logout"
   },

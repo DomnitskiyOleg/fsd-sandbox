@@ -8,6 +8,18 @@
     "resetButton": "Сбросить"
   },
   "TaskCard": {
-    "noDescription": "Нет описания"
+    "noDescription": "Нет описания",
+    "completeButton": "Завершить",
+    "startButton": "Начать",
+    "deleteButton": "Удалить",
+    "todo": "todo",
+    "inProgress": "in progress",
+    "done": "done"
+  },
+  "TasksFilter": {
+    "all": "Все",
+    "todo": "Запланированы",
+    "inProgress": "Выполняются",
+    "done": "Выполнены"
   }
 }

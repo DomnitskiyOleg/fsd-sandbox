@@ -1,11 +1,14 @@
 import { Box, Button, Container, Typography } from '@mui/material'
 
-import NewReleasesTwoToneIcon from '@mui/icons-material/NewReleasesTwoTone'
+import WebhookIcon from '@mui/icons-material/Webhook'
 import { useTranslation } from 'react-i18next'
 import { NavLink } from '@/shared/ui'
+import { useLocation } from 'react-router-dom'
 
-export function NotFoundPage() {
+export function DevelopingPage() {
   const { t } = useTranslation()
+  const { pathname } = useLocation()
+
   return (
     <Container
       maxWidth='xl'
@@ -22,7 +25,7 @@ export function NotFoundPage() {
         justifyContent='center'
         alignItems='center'
       >
-        <NewReleasesTwoToneIcon
+        <WebhookIcon
           sx={(theme) => ({ color: theme.palette.primary.main, fontSize: 200 })}
         />
         <Typography
@@ -33,7 +36,7 @@ export function NotFoundPage() {
           variant='h4'
           textAlign='center'
         >
-          {t('pages.notFound.title')}
+          {t('pages.developing.title')}
         </Typography>
         <Typography
           sx={{
@@ -42,11 +45,15 @@ export function NotFoundPage() {
           }}
           textAlign='center'
         >
-          {t('pages.notFound.subtitle')}
+          {t('pages.developing.subtitle')}
         </Typography>
-        <NavLink to='/'>
-          <Button variant='outlined'>{t('pages.notFound.backButton')}</Button>
-        </NavLink>
+        {pathname !== '/' && (
+          <NavLink to='/'>
+            <Button variant='outlined'>
+              {t('pages.developing.backButton')}
+            </Button>
+          </NavLink>
+        )}
       </Box>
     </Container>
   )

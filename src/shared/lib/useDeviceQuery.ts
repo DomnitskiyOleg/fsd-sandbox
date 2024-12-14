@@ -1,8 +1,9 @@
 import useMediaQuery from '@mui/material/useMediaQuery'
 import { useTheme } from '@mui/material/styles'
 
-export const useMobileQuery = () => {
+export const useDeviceQuery = () => {
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-  return isMobile
+  const isMedium = useMediaQuery(theme.breakpoints.down('lg'))
+  return { isMobile, isMedium }
 }

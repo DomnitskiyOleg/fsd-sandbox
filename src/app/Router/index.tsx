@@ -2,6 +2,7 @@ import { createBrowserRouter } from 'react-router-dom'
 import Layout from '../Layout'
 import { NotFoundPage } from '@/pages/notFound'
 import { TasksPage } from '@/pages/tasks'
+import { DevelopingPage } from '@/pages/developing'
 
 export default createBrowserRouter([
   {
@@ -9,7 +10,7 @@ export default createBrowserRouter([
     element: Layout,
     children: [
       {
-        element: <div>Home</div>,
+        element: <DevelopingPage />,
         index: true,
       },
       {
@@ -18,7 +19,7 @@ export default createBrowserRouter([
       },
       {
         path: '/about',
-        element: <div>developer</div>,
+        element: <DevelopingPage />,
       },
       {
         path: '*',

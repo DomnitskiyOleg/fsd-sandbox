@@ -2,7 +2,7 @@ export enum TaskStatus {
   ToDo = 'todo',
   InProgress = 'inProgress',
   Done = 'done',
-}
+} 
 
 export interface ITask {
   id: string
