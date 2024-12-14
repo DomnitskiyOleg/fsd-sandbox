@@ -1,1 +1,1 @@
-export { useMobileQuery } from './useMobileQuery'
+export { useDeviceQuery } from './useDeviceQuery'

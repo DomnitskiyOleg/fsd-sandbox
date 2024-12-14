@@ -11,6 +11,15 @@
     "noDescription": "Нет описания",
     "completeButton": "Завершить",
     "startButton": "Начать",
-    "deleteButton": "Удалить"
+    "deleteButton": "Удалить",
+    "todo": "todo",
+    "inProgress": "in progress",
+    "done": "done"
+  },
+  "TasksFilter": {
+    "all": "Все",
+    "todo": "Запланированы",
+    "inProgress": "Выполняются",
+    "done": "Выполнены"
   }
 }

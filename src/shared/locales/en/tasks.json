@@ -11,6 +11,15 @@
     "noDescription": "No description",
     "completeButton": "Complete",
     "startButton": "Start",
-    "deleteButton": "Delete"
+    "deleteButton": "Delete",
+    "todo": "todo",
+    "inProgress": "in progress",
+    "done": "done"
+  },
+  "TasksFilter": {
+    "all": "All",
+    "todo": "To do",
+    "inProgress": "In progress",
+    "done": "Done"
   }
 }
