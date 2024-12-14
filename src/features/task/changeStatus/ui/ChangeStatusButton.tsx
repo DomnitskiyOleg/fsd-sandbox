@@ -1,8 +1,11 @@
 import { changeTaskStatusAction, TaskStatus } from '@/entities/task'
-import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked'
+
+import SportsScoreOutlinedIcon from '@mui/icons-material/SportsScoreOutlined'
+import NotStartedOutlinedIcon from '@mui/icons-material/NotStartedOutlined'
 import { Button } from '@mui/material'
 import { useCallback } from 'react'
 import { useDispatch } from 'react-redux'
+import { useTranslation } from 'react-i18next'
 
 type Props = {
   id: string
@@ -11,6 +14,7 @@ type Props = {
 export function ChangeStatusButton(props: Props) {
   const { id, currentStatus } = props
   const dispatch = useDispatch()
+  const { t } = useTranslation('tasks')
 
   const onChangeStatus = useCallback(
     (status: TaskStatus) => {
@@ -26,10 +30,10 @@ export function ChangeStatusButton(props: Props) {
             onClick={() => onChangeStatus(TaskStatus.InProgress)}
             fullWidth
             variant='outlined'
-            endIcon={<RadioButtonUncheckedIcon />}
+            endIcon={<NotStartedOutlinedIcon />}
             size='small'
           >
-            Начать
+           {t('TaskCard.startButton')}
           </Button>
         )
 
@@ -39,10 +43,10 @@ export function ChangeStatusButton(props: Props) {
             onClick={() => onChangeStatus(TaskStatus.Done)}
             fullWidth
             variant='outlined'
-            endIcon={<RadioButtonUncheckedIcon />}
+            endIcon={<SportsScoreOutlinedIcon />}
             size='small'
           >
-            Завершить
+            {t('TaskCard.completeButton')}
           </Button>
         )
 

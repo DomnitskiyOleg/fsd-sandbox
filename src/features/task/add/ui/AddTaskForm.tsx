@@ -1,10 +1,10 @@
-import { Button, Container, Paper, Stack, TextField } from '@mui/material'
+import { Box, Button, Container, Paper, Stack, TextField } from '@mui/material'
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'
 import { DatePicker } from '@mui/x-date-pickers/DatePicker'
 import Grid from '@mui/material/Grid2'
 import { Dayjs } from 'dayjs'
-import { useCallback, useState } from 'react'
+import { ReactNode, useCallback, useState } from 'react'
 import RestartAltOutlinedIcon from '@mui/icons-material/RestartAltOutlined'
 import AddBoxOutlinedIcon from '@mui/icons-material/AddBoxOutlined'
 import { useMobileQuery } from '@/shared/lib'
@@ -22,9 +22,12 @@ type FormValues = {
 export function AddTaskForm() {
   const { t } = useTranslation('tasks')
   const { t: commonT } = useTranslation()
-  const [date, setDate] = useState<Dayjs | null>(null)
-  const isMobile = useMobileQuery()
+
+  const { isMobile, isMedium } = useMobileQuery()
   const dispatch = useDispatch()
+
+  const [date, setDate] = useState<Dayjs | null>(null)
+
   const {
     register,
     handleSubmit,
@@ -52,7 +55,7 @@ export function AddTaskForm() {
   return (
     <Container sx={{ mt: 4 }} maxWidth='xl'>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <Paper elevation={6} sx={{ p: 2 }}>
+        <Paper elevation={4} sx={{ p: 2 }}>
           <Grid container spacing={2}>
             <Grid size={{ xs: 12, md: 12, lg: 3 }}>
               <TextField
@@ -104,7 +107,7 @@ export function AddTaskForm() {
             justifyContent='end'
           >
             <Button
-              fullWidth={isMobile}
+              fullWidth={isMedium}
               endIcon={<RestartAltOutlinedIcon />}
               variant='outlined'
               onClick={() => {
@@ -116,7 +119,7 @@ export function AddTaskForm() {
             </Button>
             <Button
               type='submit'
-              fullWidth={isMobile}
+              fullWidth={isMedium}
               endIcon={<AddBoxOutlinedIcon />}
               variant='contained'
             >
