@@ -1,4 +1,5 @@
 import {
+  Avatar,
   Card,
   CardActions,
   CardContent,
@@ -20,6 +21,7 @@ import { useTranslation } from 'react-i18next'
 import styles from './styles'
 import { ITask } from '../model/types'
 import { ReactNode } from 'react'
+import { getTaskStatusColor } from '../lib/getTaskStatusColor'
 
 type Props = {
   task: ITask
@@ -32,7 +34,10 @@ export function TaskCard(props: Props) {
   const { task, deleteTaskSlot, changeStatusSlot } = props
 
   return (
-    <Card elevation={10} sx={{ ...styles.card }}>
+    <Card
+      elevation={4}
+      sx={{ ...styles.card, borderColor: getTaskStatusColor(task.status) }}
+    >
       <CardContent sx={styles.content}>
         <Stack
           gap={1}
@@ -41,33 +46,42 @@ export function TaskCard(props: Props) {
           justifyContent='space-between'
           mb={1}
         >
-          <Typography variant='h6' fontSize={16} sx={styles.title}>
-            {task.name}
-          </Typography>
+          <Stack gap={1} alignItems='center' flexDirection='row'>
+            <AutoAwesomeMosaicOutlinedIcon
+              sx={{ color: getTaskStatusColor(task.status) }}
+            />
+            <Typography
+              textTransform='uppercase'
+              variant='body1'
+              fontWeight={500}
+              component='div'
+              color={getTaskStatusColor(task.status)}
+            >
+              {task.status}
+            </Typography>
+          </Stack>
+
           {task.completeBy && (
             <Stack flexDirection='row' alignItems='center' gap={1}>
-              <NotificationsOutlinedIcon fontSize='small' />
-              <Typography variant='body2' component='div'>
+              <NotificationsOutlinedIcon
+                sx={{ color: getTaskStatusColor(task.status) }}
+              />
+              <Typography
+                variant='body2'
+                color={getTaskStatusColor(task.status)}
+                component='div'
+              >
                 {dayjs(task.completeBy).format('DD/MM/YYYY')}
               </Typography>
             </Stack>
           )}
         </Stack>
         <Divider />
-        <Stack flexGrow={1} gap={2} py={2}>
-          <Stack gap={1} alignItems='center' flexDirection='row'>
-            <PersonOutlineOutlinedIcon color='primary' />
-            <Link underline='none' href='mailto:domnitskiy.oleg@mail.ru'>
-              <Typography
-                variant='body2'
-                mb={0}
-                sx={{ color: 'text.secondary' }}
-                component='div'
-              >
-                {DEVELOPER_CONTACTS.email}
-              </Typography>
-            </Link>
-          </Stack>
+        <Stack flexGrow={1} gap={1} py={1} justifyContent='space-between'>
+          <Typography textAlign='center' variant='h6' component='div'>
+            {task.name}
+          </Typography>
+
           <Typography
             variant='body2'
             sx={{ color: 'text.secondary' }}
@@ -77,13 +91,21 @@ export function TaskCard(props: Props) {
           >
             {task.description ? task.description : t('TaskCard.noDescription')}
           </Typography>
+          <Stack gap={1} alignItems='center' mt={1} flexDirection='row'>
+            <Avatar sx={{ width: 24, height: 24 }} src='/broken-image.jpg' />
+            <Link underline='none' href='mailto:domnitskiy.oleg@mail.ru'>
+              <Typography
+                variant='caption'
+                mb={0}
+                sx={{ color: 'text.secondary' }}
+                component='div'
+              >
+                {DEVELOPER_CONTACTS.email}
+              </Typography>
+            </Link>
+          </Stack>
         </Stack>
-        <Stack gap={1} alignItems='center' mb={1} flexDirection='row'>
-          <AutoAwesomeMosaicOutlinedIcon color='primary' />
-          <Typography textTransform='uppercase' variant='body2' component='div'>
-            {task.status}
-          </Typography>
-        </Stack>
+
         <Divider />
       </CardContent>
       <CardActions sx={styles.actions}>

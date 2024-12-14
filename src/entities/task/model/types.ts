@@ -1,8 +1,8 @@
 export enum TaskStatus {
   ToDo = 'todo',
-  InProgress = 'inProgress',
+  InProgress = 'in progress',
   Done = 'done',
-}
+} 
 
 export interface ITask {
   id: string
