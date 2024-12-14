@@ -8,6 +8,9 @@
     "resetButton": "Сбросить"
   },
   "TaskCard": {
-    "noDescription": "Нет описания"
+    "noDescription": "Нет описания",
+    "completeButton": "Завершить",
+    "startButton": "Начать",
+    "deleteButton": "Удалить"
   }
 }

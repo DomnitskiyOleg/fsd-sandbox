@@ -8,6 +8,9 @@
     "resetButton": "Reset"
   },
   "TaskCard": {
-    "noDescription": "No description"
+    "noDescription": "No description",
+    "completeButton": "Complete",
+    "startButton": "Start",
+    "deleteButton": "Delete"
   }
 }
