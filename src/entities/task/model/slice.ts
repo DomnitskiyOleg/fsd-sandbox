@@ -15,7 +15,7 @@ export const tasksSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(addTaskAction, (state, action) => {
-      state.tasks.push({ id: nanoid(), ...action.payload })
+      state.tasks.unshift({ id: nanoid(), ...action.payload })
     })
     builder.addCase(deleteTaskAction, (state, action) => {
       state.tasks = state.tasks.filter((v) => v.id !== action.payload.id)

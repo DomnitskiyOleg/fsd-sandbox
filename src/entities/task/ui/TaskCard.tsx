@@ -57,7 +57,7 @@ export function TaskCard(props: Props) {
               component='div'
               color={getTaskStatusColor(task.status)}
             >
-              {task.status}
+              {t(`TaskCard.${task.status}`)}
             </Typography>
           </Stack>
 
