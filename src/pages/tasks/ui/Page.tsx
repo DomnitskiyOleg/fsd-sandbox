@@ -5,7 +5,7 @@ import { TasksGrid } from '@/widgets/TasksGrid'
 export function TasksPage() {
   return (
     <>
-      <AddTaskForm filterSlot={<TasksFilter />} />
+      <AddTaskForm />
       <TasksGrid />
     </>
   )
