@@ -85,6 +85,7 @@ export function AddTaskForm() {
             <Grid size={{ xs: 12, md: 4, lg: 3 }}>
               <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <DatePicker
+                  name='date'
                   value={date}
                   onChange={(newValue) => setDate(newValue)}
                   label={t('AddTaskForm.dateLabel')}
