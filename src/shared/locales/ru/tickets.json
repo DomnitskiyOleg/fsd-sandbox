@@ -1,0 +1,30 @@
+{
+    "TicketsGrid": {
+        "buyText": "Купить за {{price}}"
+    },
+    "TicketCard": {
+        "carrier": {
+            "SU": "Aeroflot",
+            "S7": "S7 Airlines",
+            "BA": "British Airways",
+            "TK": "Turkish Airlines"
+        },
+        "stops": {
+            "stop_one": "{{count}} пересадка",
+            "stop_few": "{{count}} пересадки",
+            "stop_many": "{{count}} перecадок",
+            "stop_other": "{{count}} пересадок"
+        }
+    },
+    "TicketsSettings": {
+        "currencyLabel": "Валюта",
+        "stopsLabel": "Количество пересадок",
+        "stops": {
+            "stop_one": "{{count}} пересадка",
+            "stop_few": "{{count}} пересадки",
+            "stop_many": "{{count}} перecадок",
+            "stop_other": "{{count}} пересадок",
+            "all": "Все"
+        }
+    }
+}

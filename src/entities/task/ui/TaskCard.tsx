@@ -8,15 +8,10 @@ import {
     Stack,
     Typography,
 } from '@mui/material'
-
 import dayjs from 'dayjs'
-
 import AutoAwesomeMosaicOutlinedIcon from '@mui/icons-material/AutoAwesomeMosaicOutlined'
 import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined'
 import { DEVELOPER_CONTACTS } from '@/shared/config'
-
-import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined'
-
 import { useTranslation } from 'react-i18next'
 import styles from './styles'
 import { ITask } from '../model/types'

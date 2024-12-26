@@ -1,5 +1,4 @@
 import { Styles } from '@/shared/types'
-import { blue, green } from '@mui/material/colors'
 
 const styles: Styles = {
   card: {

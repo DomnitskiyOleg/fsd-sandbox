@@ -7,20 +7,23 @@ import Stack from '@mui/material/Stack'
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded'
 import AssignmentRoundedIcon from '@mui/icons-material/AssignmentRounded'
 import SettingsRoundedIcon from '@mui/icons-material/SettingsRounded'
+import LightbulbCircleRoundedIcon from '@mui/icons-material/LightbulbCircleRounded'
 import InfoRoundedIcon from '@mui/icons-material/InfoRounded'
 import { useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { NavLink } from '../NavLink/NavLink'
-
+import AirplaneTicketRoundedIcon from '@mui/icons-material/AirplaneTicketRounded';
 
 const mainListItems = [
   { path: '/', name: 'home', icon: <HomeRoundedIcon /> },
   { path: '/tasks', name: 'tasks', icon: <AssignmentRoundedIcon /> },
+  { path: '/tickets', name: 'tickets', icon: <AirplaneTicketRoundedIcon /> },
 ]
 
 const secondaryListItems = [
   { path: '/settings', name: 'settings', icon: <SettingsRoundedIcon /> },
   { path: '/about', name: 'about', icon: <InfoRoundedIcon /> },
+  { path: 'developer', name: 'developer', icon: <LightbulbCircleRoundedIcon /> },
 ]
 
 export default function MenuContent() {

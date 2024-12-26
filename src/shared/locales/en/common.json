@@ -1,34 +1,36 @@
 {
-  "developer": "Domnitskiy Oleg",
-  "drawer": {
-    "home": "Home",
-    "tasks": "Tasks Mindbox",
-    "settings": "Settings",
-    "about": "About"
-  },
-  "components": {
-    "ContactCard": {
-      "title": "Ask a question",
-      "subtitle": "For any questions and suggestions, contact the developer on Telegram!",
-      "button": "Contact"
-    }
-  },
-  "pages": {
-    "notFound": {
-      "title": "Page not found",
-      "subtitle": "Oops! We can't seem to find the page you‘re looking for.",
-      "backButton": "To Main"
+    "developer": "Domnitskiy Oleg",
+    "drawer": {
+        "home": "Home",
+        "tasks": "Tasks",
+        "settings": "Settings",
+        "about": "About",
+        "developer": "Developer",
+        "tickets": "Air tickets"
     },
-    "developing": {
-      "title": "Something amazing is coming soon",
-      "subtitle": "We are hard at work on this page. Thank you for your patience!",
-      "backButton": "To Main"
+    "components": {
+        "ContactCard": {
+            "title": "Ask a question",
+            "subtitle": "For any questions and suggestions, contact the developer on Telegram!",
+            "button": "Contact"
+        }
+    },
+    "pages": {
+        "notFound": {
+            "title": "Page not found",
+            "subtitle": "Oops! We can't seem to find the page you‘re looking for.",
+            "backButton": "To Main"
+        },
+        "developing": {
+            "title": "Something amazing is coming soon",
+            "subtitle": "We are hard at work on this page. Thank you for your patience!",
+            "backButton": "To Main"
+        }
+    },
+    "actions": {
+        "logout": "Logout"
+    },
+    "validation": {
+        "required": "Required field"
     }
-  },
-  "actions": {
-    "logout": "Logout"
-  },
-  "validation": {
-    "required": "Required field"
-  }
 }

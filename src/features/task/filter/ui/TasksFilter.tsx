@@ -1,13 +1,12 @@
 import { TaskStatus } from '@/entities/task'
-import { useDeviceQuery } from '@/shared/lib'
 import { Paper, ToggleButton, ToggleButtonGroup } from '@mui/material'
-import { useCallback, useState, MouseEvent } from 'react'
+import { useCallback, MouseEvent } from 'react'
 import { Filter, selectFilter, setTaskFilter } from '../model/slice'
 import { useDispatch, useSelector } from 'react-redux'
 import { useTranslation } from 'react-i18next'
 
 export function TasksFilter() {
-  const { isMedium } = useDeviceQuery()
+
   const { t } = useTranslation('tasks')
   const dispatch = useDispatch()
   const filter = useSelector(selectFilter)

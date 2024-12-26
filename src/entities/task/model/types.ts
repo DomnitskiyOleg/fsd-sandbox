@@ -1,14 +1,18 @@
 export enum TaskStatus {
-  ToDo = 'todo',
-  InProgress = 'inProgress',
-  Done = 'done',
-} 
+    ToDo = 'todo',
+    InProgress = 'inProgress',
+    Done = 'done',
+}
 
 export interface ITask {
-  id: string
-  name: string
-  description: string | null
-  status: TaskStatus
-  completeBy: string | null
-  position: number
+    id: string
+    name: string
+    description: string | null
+    status: TaskStatus
+    completeBy: string | null
+    position: number
+}
+
+export type FilteredTasks = {
+    [key in TaskStatus]: ITask[]
 }

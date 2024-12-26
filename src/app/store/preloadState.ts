@@ -1,5 +1,3 @@
-import { RootState } from './configure'
-
 export default () => {
   try {
     const serializedState = localStorage.getItem('redux-state')

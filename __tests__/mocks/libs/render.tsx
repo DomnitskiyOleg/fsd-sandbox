@@ -1,4 +1,4 @@
-import { store } from '@/app/Store'
+import { store } from '@/app/store'
 import { render as testRender } from '@testing-library/react'
 import { ReactNode } from 'react'
 import { Provider as StoreProvider } from 'react-redux'
