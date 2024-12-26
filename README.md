@@ -1,5 +1,9 @@
 # FSD SANDBOX
 
+## Demonstration
+![tickets1](https://github.com/user-attachments/assets/f6dfe749-87b9-48ef-a1c0-2335bddf40bc)
+![tickets2](https://github.com/user-attachments/assets/d019e06e-7adc-49cf-b699-dc85b80ad848)
+
 ---
 
 ### Deploy link
