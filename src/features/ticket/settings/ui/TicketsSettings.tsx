@@ -20,6 +20,7 @@ import {
 import { useCallback, useState, MouseEvent } from 'react'
 
 const CHECKBOXES = [{ value: 0 }, { value: 1 }, { value: 2 }, { value: 3 }]
+
 export function TicketsSettings() {
     const { stopsFilter, currency } = useSelector(selectTicketSettings)
     const dispatch = useDispatch()
@@ -42,7 +43,7 @@ export function TicketsSettings() {
             setChekedAll(false)
             dispatch(setStopsFilter(newState))
         },
-        [dispatch, stopsFilter, checkedAll],
+        [stopsFilter, checkedAll],
     )
 
     const handleChange = useCallback(
