@@ -1,8 +1,6 @@
-import { Box, Button, Container, Typography } from '@mui/material'
+import { Container } from '@mui/material'
 import Grid from '@mui/material/Grid2'
-import WebhookIcon from '@mui/icons-material/Webhook'
 import { useTranslation } from 'react-i18next'
-import { NavLink } from '@/shared/ui'
 import { useLocation } from 'react-router-dom'
 
 const SOCIALS = [
@@ -11,6 +9,7 @@ const SOCIALS = [
         link: 'https://www.linkedin.com/in/domnitskiy-oleg/',
     },
 ]
+
 export function DeveloperPage() {
     const { t } = useTranslation()
     const { pathname } = useLocation()
