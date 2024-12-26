@@ -4,24 +4,24 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 export type Filter = TaskStatus | 'all'
 
 type FilterState = {
-  filter: Filter
+    filter: Filter
 }
 
 const initialState: FilterState = {
-  filter: 'all',
+    filter: 'all',
 }
 
 const filterSlice = createSlice({
-  name: 'featureName',
-  initialState,
-  reducers: {
-    setTaskFilter(state, action: PayloadAction<{ filter: Filter }>) {
-      state.filter = action.payload.filter
+    name: 'tasksFilter',
+    initialState,
+    reducers: {
+        setTaskFilter(state, action: PayloadAction<{ filter: Filter }>) {
+            state.filter = action.payload.filter
+        },
     },
-  },
 })
 
-export const selectFilter = (state: { filter: FilterState }) =>
-  state.filter.filter
+export const selectFilter = (state: { tasksfilter: FilterState }) =>
+    state.tasksfilter.filter
 export const { setTaskFilter } = filterSlice.actions
 export default filterSlice.reducer
