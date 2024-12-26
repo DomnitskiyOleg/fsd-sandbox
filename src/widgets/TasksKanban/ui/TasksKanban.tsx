@@ -11,7 +11,7 @@ import { useMemo } from 'react'
 import { TaskCard, TaskStatus } from '@/entities/task'
 import { FilteredTasks } from '@/entities/task/model/types'
 import { selectTasks } from '@/entities/task/model/slice'
-import { AdaptiveScroll } from '@/shared/ui'
+import { ScrollContainer } from '@/shared/ui'
 
 const STATUSES = Object.values(TaskStatus)
 
@@ -39,12 +39,8 @@ export function TasksKanban() {
     }, [tasks])
 
     return (
-        <AdaptiveScroll>
-            <DragDropContext
-                onDragEnd={() => {
-                    console.log('drag end')
-                }}
-            >
+        <ScrollContainer>
+            <DragDropContext onDragEnd={() => {}}>
                 <Stack
                     flexDirection='row'
                     minWidth={900}
@@ -109,6 +105,6 @@ export function TasksKanban() {
                     ))}
                 </Stack>
             </DragDropContext>
-        </AdaptiveScroll>
+        </ScrollContainer>
     )
 }
