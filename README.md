@@ -1,5 +1,44 @@
 # FSD SANDBOX
 
+---
+
+### Deploy link
+
+https://fsd-sandbox.vercel.app/
+
+---
+
+### To install
+
+```
+git clone https://github.com/DomnitskiyOleg/fsd-sandbox.git
+
+```
+
+use yarn ?
+
+```
+yarn
+```
+
+use npm ?
+
+```
+npm install
+```
+
+### To start
+
+```
+npm start
+```
+
+or
+
+```
+yarn start
+```
+
 ## About
 
 This is FSD based platform for completing test assignments.
@@ -26,4 +65,4 @@ Will completed soon...
 
 ## Getting started
 
-Try it ! <a href="https://fsd-sandbox.vercel.app/" style="color: green;">Зелёная ссылка</a>
+Try it ! <a href="https://fsd-sandbox.vercel.app/" style="color: green;"></a>
