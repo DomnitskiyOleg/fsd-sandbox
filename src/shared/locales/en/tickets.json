@@ -10,6 +10,7 @@
             "TK": "Turkish Airlines"
         },
         "stops": {
+            "stop_zero": "No stops",
             "stop_one": "{{count}} stop",
             "stop_few": "{{count}} stops",
             "stop_many": "{{count}} stops",
@@ -20,6 +21,7 @@
         "currencyLabel": "Currency",
         "stopsLabel": "Stops amount",
         "stops": {
+            "stop_zero": "No stops",
             "stop_one": "{{count}} stop",
             "stop_few": "{{count}} stops",
             "stop_many": "{{count}} stops",

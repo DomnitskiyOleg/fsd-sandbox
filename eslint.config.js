@@ -7,7 +7,7 @@ import pluginReact from 'eslint-plugin-react'
 export default [
     // files
     { files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'] },
-    // settigs
+    // settings
     { settings: { react: { version: '18.3' } } },
     // language settings
     {
@@ -15,7 +15,7 @@ export default [
             globals: globals.browser,
             ecmaVersion: 'latest',
             parserOptions: {
-                project: ['./tsconfig.node.json', './tsconfig.app.json'],
+                project: ['./tsconfig.node.json', './tsconfig.json'],
                 projectService: true,
                 tsconfigRootDir: import.meta.dirname,
             },
