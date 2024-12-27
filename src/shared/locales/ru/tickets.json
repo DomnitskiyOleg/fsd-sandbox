@@ -10,6 +10,7 @@
             "TK": "Turkish Airlines"
         },
         "stops": {
+            "stop_zero": "Без пересадок",
             "stop_one": "{{count}} пересадка",
             "stop_few": "{{count}} пересадки",
             "stop_many": "{{count}} перecадок",
@@ -20,6 +21,7 @@
         "currencyLabel": "Валюта",
         "stopsLabel": "Количество пересадок",
         "stops": {
+            "stop_zero": "Без пересадок",
             "stop_one": "{{count}} пересадка",
             "stop_few": "{{count}} пересадки",
             "stop_many": "{{count}} перecадок",
