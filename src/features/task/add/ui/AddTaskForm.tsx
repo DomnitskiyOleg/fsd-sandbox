@@ -67,6 +67,7 @@ export function AddTaskForm() {
                                 {...register('name', {
                                     required: commonT('validation.required'),
                                 })}
+                                name='name'
                                 error={!!errors.name}
                                 helperText={
                                     errors.name
@@ -81,6 +82,7 @@ export function AddTaskForm() {
                                 size='small'
                                 {...register('description')}
                                 fullWidth
+                                name='description'
                                 label={t('AddTaskForm.descriptionLabel')}
                                 multiline={isMobile}
                                 rows={2}
