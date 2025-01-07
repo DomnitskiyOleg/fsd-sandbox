@@ -2,10 +2,14 @@ import { Styles } from '@/shared/types'
 import { grey } from '@mui/material/colors'
 
 const styles: Styles = {
+    header: (theme) => ({
+        p: 2,
+        borderRadius: 0,
+        my: 5,
+    }),
     container: {
         borderRadius: 3,
         overflow: 'hidden',
-        p: 2,
         borderLeftWidth: 20,
         borderBottomWidth: 35,
         borderBottomStyle: 'solid',

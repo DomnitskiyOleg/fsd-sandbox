@@ -102,24 +102,20 @@ export const PROJECTS = [
         slug: 'appocore',
         link: 'https://drive.google.com/file/d/1pKooOJe7S23xTGOykuAnHJkHuCcbxgf9/view',
         whatDone: ['1', '2', '3', '4', '5', '6', '7', '8'],
-        stack: ['NextJS (app router)', 'Redux', 'RTK Query', 'Mantine'],
     },
     {
         slug: 'orp',
         link: 'https://drive.google.com/file/d/1pKooOJe7S23xTGOykuAnHJkHuCcbxgf9/view',
         whatDone: ['1', '2', '3', '4', '5', '6'],
-        stack: ['NextJS (app router)', 'Redux', 'RTK Query', 'Mantine'],
     },
     {
         slug: 'appomart',
         link: 'https://drive.google.com/file/d/1pKooOJe7S23xTGOykuAnHJkHuCcbxgf9/view',
         whatDone: ['1', '2', '3', '4', '5'],
-        stack: ['NextJS (page router)', 'Redux', 'RTK Query', 'Mantine'],
     },
     {
         slug: 'kod',
         link: 'https://drive.google.com/file/d/1pKooOJe7S23xTGOykuAnHJkHuCcbxgf9/view',
         whatDone: ['1', '2', '3', '4', '5'],
-        stack: ['NextJS (page router)', 'Redux', 'RTK Query', 'Mantine'],
     },
 ]
