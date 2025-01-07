@@ -52,4 +52,24 @@ export const THEME = createTheme({
             },
         },
     },
+    typography: {
+        h3: {
+            fontSize: '3rem',
+            '@media (max-width:800px)': {
+                fontSize: '2rem',
+            },
+            '@media (max-width:400px)': {
+                fontSize: '1.5rem',
+            },
+        },
+        h4: {
+            fontSize: '2.125rem',
+            '@media (max-width:800px)': {
+                fontSize: '1.8rem',
+            },
+            '@media (max-width:400px)': {
+                fontSize: '1.2rem',
+            },
+        },
+    },
 })

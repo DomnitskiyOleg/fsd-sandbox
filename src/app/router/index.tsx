@@ -4,6 +4,7 @@ import { NotFoundPage } from '@/pages/notFound'
 import { TasksPage } from '@/pages/tasks'
 import { DevelopingPage } from '@/pages/developing'
 import { TicketsPage } from '@/pages/tickets'
+import { DeveloperPage } from '@/pages/developer'
 
 export default createBrowserRouter([
     {
@@ -25,6 +26,10 @@ export default createBrowserRouter([
             {
                 path: '/about',
                 element: <DevelopingPage />,
+            },
+            {
+                path: '/developer',
+                element: <DeveloperPage />,
             },
             {
                 path: '*',

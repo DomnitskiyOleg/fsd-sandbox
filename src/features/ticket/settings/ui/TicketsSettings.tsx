@@ -82,6 +82,7 @@ export function TicketsSettings() {
                     </Typography>
                     <FormGroup sx={styles.form}>
                         <FormControlLabel
+                        name='check-all'
                             checked={checkedAll}
                             onChange={() => {
                                 handleCheck(null)
@@ -101,6 +102,7 @@ export function TicketsSettings() {
 
                             return (
                                 <FormControlLabel
+                                    name={`check-${v.value}`}
                                     key={i}
                                     checked={checked}
                                     onChange={() => {
