@@ -11,149 +11,43 @@ import {
     Typography,
 } from '@mui/material'
 import Grid from '@mui/material/Grid2'
-import {
-    AiOutlineWhatsApp,
-    AiOutlineMail,
-    AiOutlineLinkedin,
-} from 'react-icons/ai'
-import { PiTelegramLogoLight } from 'react-icons/pi'
 import CircleIcon from '@mui/icons-material/Circle'
-import { VscGithubAlt } from 'react-icons/vsc'
-import { PiCertificate } from 'react-icons/pi'
-import { PiUsers } from 'react-icons/pi'
-import { GrLanguage } from 'react-icons/gr'
-import { IoBarChartOutline } from 'react-icons/io5'
+import {
+    CERTIFICATES,
+    LANGUAGES,
+    PROJECTS,
+    SKILLS,
+    SOCIALS,
+} from '../model/mockData'
+import { useTranslation } from 'react-i18next'
+import styles from './styles'
+import { useDeviceQuery } from '@/shared/lib'
+import HorizontalRuleIcon from '@mui/icons-material/HorizontalRule'
 
-const SOCIALS = [
-    {
-        name: 'linkedin.com/in/domnitskiy-oleg',
-        link: 'https://www.linkedin.com/in/domnitskiy-oleg/',
-        icon: <AiOutlineLinkedin size={25} />,
-    },
-    {
-        name: '+7 999 080-70-67',
-        link: 'https://api.whatsapp.com/send/?phone=79990807067&text&type=phone_number&app_absent=0',
-        icon: <AiOutlineWhatsApp size={25} />,
-    },
-    {
-        name: 't.me/domnitskiy_oleg',
-        link: 'https://t.me/domnitskiy_oleg/',
-        icon: <PiTelegramLogoLight size={25} />,
-    },
-    {
-        name: 'domnitskiy.oleg@mail.ru',
-        link: 'https://www.linkedin.com/in/domnitskiy-oleg/',
-        icon: <AiOutlineMail size={25} />,
-    },
-    {
-        name: 'github.com/DomnitskiyOleg',
-        link: 'https://github.com/DomnitskiyOleg/',
-        icon: <VscGithubAlt size={25} />,
-    },
-]
-
-const SKILLS = [
-    {
-        row: ['TypeScript', 'JavaScript', 'NodeJS'],
-    },
-    {
-        row: ['Next JS', 'React', 'Expo', 'React Native'],
-    },
-    {
-        row: ['Redux', 'Redux Toolkit', 'RTK Query'],
-    },
-    {
-        row: ['HTML', 'CSS', 'PostCSS', 'SASS'],
-    },
-    {
-        row: ['Git/GitLab', 'Webpack', 'CI/CD', 'nginx'],
-    },
-    {
-        row: ['REST API', 'Docker', 'Linux'],
-    },
-    {
-        row: ['FSD architecture', 'Atomic Design'],
-    },
-    {
-        row: ['Jest'],
-    },
-]
-
-const LANGUAGES = [
-    {
-        name: 'Русский - native',
-    },
-    {
-        name: 'Английский - intermadiate',
-    },
-]
-
-const CERTIFICATES = [
-    {
-        name: 'Диплом',
-        link: 'https://drive.google.com/file/d/1pKooOJe7S23xTGOykuAnHJkHuCcbxgf9/view',
-        icon: <PiCertificate size={25} />,
-    },
-    {
-        name: 'Управление персоналом',
-        link: 'https://drive.google.com/file/d/1z_ydEXLwWE9_YcuEEVPlUBrJshPxApCX/view?usp=drive_link',
-        icon: <PiUsers size={25} />,
-    },
-    {
-        name: 'Английский',
-        link: 'https://drive.google.com/file/d/1gEyDukuXKCpQvPInEvL1v4yfm-DkxtXV/view?usp=drive_link',
-        icon: <GrLanguage size={25} />,
-    },
-    {
-        name: 'Финансы',
-        link: 'https://drive.google.com/file/d/1la4_q1qxfOIRD4wg8vz6TJCIGSO3vAOM/view?usp=drive_link',
-        icon: <IoBarChartOutline size={25} />,
-    },
-]
-
-const PROJECTS = [
-    {
-        slug: 'appocore',
-        link: 'https://drive.google.com/file/d/1pKooOJe7S23xTGOykuAnHJkHuCcbxgf9/view',
-        whatDone: ['1', '2', '3', '4', '5', '6', '7', '8'],
-        stack: ['NextJS (app router)', 'Redux', 'RTK Query', 'Mantine'],
-    },
-    {
-        slug: 'orp',
-        link: 'https://drive.google.com/file/d/1pKooOJe7S23xTGOykuAnHJkHuCcbxgf9/view',
-        whatDone: ['1', '2', '3', '4', '5', '6', '7', '8'],
-        stack: ['NextJS (app router)', 'Redux', 'RTK Query', 'Mantine'],
-    },
-    {
-        slug: 'appomart',
-        link: 'https://drive.google.com/file/d/1pKooOJe7S23xTGOykuAnHJkHuCcbxgf9/view',
-        whatDone: ['1', '2', '3', '4', '5', '6', '7', '8'],
-        stack: ['NextJS (page router)', 'Redux', 'RTK Query', 'Mantine'],
-    },
-]
 export function DeveloperPage() {
+    const { t } = useTranslation('developer')
+    const { isMobile } = useDeviceQuery()
     return (
         <Container sx={{ marginTop: 4 }} maxWidth='lg'>
-            <Paper
-                elevation={4}
-                sx={{ borderRadius: 3, overflow: 'hidden', p: 2 }}
-            >
+            <Paper elevation={4} sx={styles.container}>
                 <Grid sx={{ mt: 1 }} container spacing={0}>
                     <Grid
                         order={{ xs: 2, lg: 1 }}
                         size={{ xs: 12, lg: 5, xl: 4 }}
+                        display='flex'
+                        flexDirection='column'
+                        sx={styles.column}
                     >
-                        <Box pt={2} borderBottom={1} borderRight={1}>
-                            <Typography mb={1} variant='h4'>
-                                КОНТАКТЫ
-                            </Typography>
-                            <List
-                                sx={{
-                                    width: '100%',
-                                    maxWidth: 360,
-                                    bgcolor: 'background.paper',
-                                }}
+                        <Box pt={2} sx={styles.block}>
+                            <Typography
+                                fontWeight={600}
+                                textTransform='uppercase'
+                                mb={1}
+                                variant='h4'
                             >
+                                {t('DeveloperPage.contacts')}
+                            </Typography>
+                            <List>
                                 {SOCIALS.map((v) => (
                                     <ListItemButton
                                         onClick={() => window.open(v.link)}
@@ -178,17 +72,16 @@ export function DeveloperPage() {
                                 ))}
                             </List>
                         </Box>
-                        <Box pt={2} borderBottom={1} borderRight={1}>
-                            <Typography mb={1} variant='h4'>
-                                НАВЫКИ
-                            </Typography>
-                            <List
-                                sx={{
-                                    width: '100%',
-                                    maxWidth: 360,
-                                    bgcolor: 'background.paper',
-                                }}
+                        <Box pt={2} sx={styles.block}>
+                            <Typography
+                                fontWeight={600}
+                                textTransform='uppercase'
+                                mb={1}
+                                variant='h4'
                             >
+                                {t('DeveloperPage.skills')}
+                            </Typography>
+                            <List>
                                 {SKILLS.map((v) => (
                                     <ListItem key={v.row.toString()}>
                                         <ListItemIcon
@@ -210,31 +103,35 @@ export function DeveloperPage() {
                                 ))}
                             </List>
                         </Box>
-                        <Box pt={2} pb={2} borderBottom={1} borderRight={1}>
-                            <Stack spacing={2}>
-                                <Typography variant='h4'>
-                                    ОБРАЗОВАНИЕ
+                        <Box p={2} pl={0} sx={styles.block}>
+                            <Stack>
+                                <Typography
+                                    fontWeight={600}
+                                    textTransform='uppercase'
+                                    mb={4}
+                                    variant='h4'
+                                >
+                                    {t('DeveloperPage.educationTitle')}
                                 </Typography>
-                                <Typography variant='h5'>
-                                    ВЫСШЕЕ, ИНЖЕНЕР
+                                <Typography mb={2} variant='h5'>
+                                    {t('DeveloperPage.educationSubtitle')}
                                 </Typography>
                                 <Typography variant='body1'>
-                                    Информационные системы и технологии. ДВГУПС
-                                    г. Хабаровск 2003-2008г
+                                    {t('DeveloperPage.educationUniversity')}
                                 </Typography>
                             </Stack>
                         </Box>
 
-                        <Box pt={2} borderBottom={1} borderRight={1}>
+                        <Box pt={2} sx={styles.block}>
                             <Stack spacing={2}>
-                                <Typography variant='h4'>ЯЗЫКИ</Typography>
-                                <List
-                                    sx={{
-                                        width: '100%',
-                                        maxWidth: 360,
-                                        bgcolor: 'background.paper',
-                                    }}
+                                <Typography
+                                    fontWeight={600}
+                                    textTransform='uppercase'
+                                    variant='h4'
                                 >
+                                    {t('DeveloperPage.languages')}
+                                </Typography>
+                                <List>
                                     {LANGUAGES.map((v) => (
                                         <ListItem key={v.name}>
                                             <ListItemIcon
@@ -255,22 +152,29 @@ export function DeveloperPage() {
                                 </List>
                             </Stack>
                         </Box>
-                        <Box pt={2} borderRight={1}>
-                            <Stack spacing={2}>
-                                <Typography variant='h4'>
-                                    СЕРТИФИКАТЫ
+                        <Box
+                            flex={1}
+                            display='flex'
+                            flexDirection='column'
+                            pt={2}
+                        >
+                            <Stack spacing={2} flex={1}>
+                                <Typography
+                                    fontWeight={600}
+                                    textTransform='uppercase'
+                                    variant='h4'
+                                >
+                                    {t('DeveloperPage.certificates.title')}
                                 </Typography>
                                 <List
                                     sx={{
-                                        width: '100%',
-                                        maxWidth: 360,
-                                        bgcolor: 'background.paper',
+                                        flex: 1,
                                     }}
                                 >
                                     {CERTIFICATES.map((v) => (
                                         <ListItemButton
                                             onClick={() => window.open(v.link)}
-                                            key={v.name}
+                                            key={v.slug}
                                         >
                                             <ListItemIcon
                                                 sx={{ minWidth: 0, mr: 1 }}
@@ -278,7 +182,9 @@ export function DeveloperPage() {
                                                 {v.icon}
                                             </ListItemIcon>
                                             <ListItemText
-                                                primary={v.name}
+                                                primary={t(
+                                                    `DeveloperPage.certificates.${v.slug}`,
+                                                )}
                                                 sx={{
                                                     textDecoration: 'underline',
                                                 }}
@@ -292,68 +198,140 @@ export function DeveloperPage() {
                     <Grid
                         order={{ md: 1, lg: 2 }}
                         size={{ xs: 12, md: 12, lg: 7, xl: 8 }}
+                        sx={(theme) => ({
+                            [theme.breakpoints.down('lg')]: styles.column,
+                        })}
                     >
                         <Stack
-                            borderBottom={1}
                             p={2}
                             justifyContent='space-between'
                             spacing={8}
+                            sx={styles.block}
                         >
-                            <Typography mb={1} variant='h4'>
-                                ОБО МНЕ
+                            <Typography
+                                fontWeight={600}
+                                textTransform='uppercase'
+                                mb={1}
+                                variant='h4'
+                            >
+                                {t('DeveloperPage.aboutTitle')}
                             </Typography>
-                            <Typography variant='body1' lineHeight={1.7}>
-                                Я инженер-программист с профильным образованием
-                                в области IT. Опыт в коммерческой разработке
-                                более 1 года, более 10 лет опыта в качестве
-                                системного администратора. Организован, быстро
-                                учусь, нацелен на решение конкретных задач. На
-                                данный момент поддерживаю и дорабатываю более 10
-                                проектов компании. Амбициозен, готов как к
-                                командной, так и к индивидуальной работе.
+                            <Typography variant='body1' lineHeight={1.8}>
+                                {t('DeveloperPage.aboutSubtitle')}
                             </Typography>
                         </Stack>
-                        <Box pt={2} pl={2}>
-                            <Typography mb={1} variant='h4'>
-                                ОПЫТ
+                        <Box
+                            p={2}
+                            sx={(theme) => ({
+                                [theme.breakpoints.down('lg')]: styles.block,
+                            })}
+                        >
+                            <Typography
+                                fontWeight={600}
+                                textTransform='uppercase'
+                                mb={1}
+                                variant='h4'
+                            >
+                                {t('DeveloperPage.experience')}
                             </Typography>
-                            <Typography mb={1} variant='h6'>
-                                FRONTEND DEVELOPER
+                            <Typography
+                                textTransform='uppercase'
+                                mb={1}
+                                variant='h6'
+                            >
+                                {t('DeveloperPage.position')}
                             </Typography>
                             <Stack
-                                direction='row'
+                                direction={{ xs: 'column', sm: 'row' }}
                                 justifyContent='space-between'
                             >
-                                <Typography mb={1} variant='h6'>
-                                    LLC &quot;APPOMART&quot;
+                                <Typography
+                                    textTransform='uppercase'
+                                    mb={1}
+                                    variant='h6'
+                                >
+                                    {t('DeveloperPage.company')}
                                 </Typography>
-                                <Typography mb={1} variant='h6'>
-                                    НОЯБРЬ 2023 - Н.В.
+                                <Typography
+                                    textTransform='uppercase'
+                                    mb={1}
+                                    variant='h6'
+                                >
+                                    {t('DeveloperPage.period')}
                                 </Typography>
                             </Stack>
-                            <List
-                                sx={{
-                                    width: '100%',
-                                    maxWidth: 360,
-                                    bgcolor: 'background.paper',
-                                }}
-                            >
+                            <List>
                                 {PROJECTS.map((v) => (
-                                    <ListItem key={v.slug}>
-                                        <ListItemIcon
-                                            sx={{
-                                                minWidth: 0,
-                                                mr: 1,
-                                            }}
+                                    <Stack key={v.slug}>
+                                        <ListItem
+                                            disableGutters={isMobile}
+                                            disablePadding={isMobile}
                                         >
-                                            <CircleIcon
-                                                fontSize='small'
-                                                sx={{ fontSize: 14 }}
-                                            />
-                                        </ListItemIcon>
+                                            <ListItemIcon
+                                                sx={{
+                                                    minWidth: 0,
+                                                    mr: 1,
+                                                }}
+                                            >
+                                                <CircleIcon
+                                                    fontSize='small'
+                                                    sx={{ fontSize: 14 }}
+                                                />
+                                            </ListItemIcon>
 
-                                        <ListItemText primary={v.slug} />
-                                    </ListItem>
+                                            <ListItemText
+                                                slotProps={{
+                                                    primary: {
+                                                        fontSize: 20,
+                                                        fontWeight: 500,
+                                                    },
+                                                }}
+                                                sx={{ fontWeight: 800 }}
+                                                primary={t(
+                                                    `DeveloperPage.projects.${v.slug}.title`,
+                                                )}
+                                            />
+                                        </ListItem>
+                                        <List
+                                            dense
+                                            sx={{ pl: isMobile ? 0 : 2 }}
+                                        >
+                                            {v.whatDone.map((k, i) => (
+                                                <ListItem
+                                                    disableGutters={isMobile}
+                                                    disablePadding={isMobile}
+                                                    key={k + i}
+                                                >
+                                                    <ListItemIcon
+                                                        sx={{
+                                                            minWidth: 0,
+                                                            mr: 1,
+                                                        }}
+                                                    >
+                                                        <HorizontalRuleIcon
+                                                            fontSize='small'
+                                                            sx={{
+                                                                fontSize: 14,
+                                                            }}
+                                                        />
+                                                    </ListItemIcon>
+                                                    <ListItemText
+                                                        slotProps={{
+                                                            primary: {
+                                                                fontSize:
+                                                                    isMobile
+                                                                        ? 14
+                                                                        : '1rem',
+                                                            },
+                                                        }}
+                                                        primary={t(
+                                                            `DeveloperPage.projects.${v.slug}.${k}`,
+                                                        )}
+                                                    />
+                                                </ListItem>
+                                            ))}
+                                        </List>
+                                    </Stack>
                                 ))}
                             </List>
                         </Box>
