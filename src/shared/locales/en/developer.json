@@ -1,32 +1,67 @@
 {
-    "TicketsGrid": {
-        "buyText": "Купить за {{price}}"
-    },
-    "TicketCard": {
-        "carrier": {
-            "SU": "Aeroflot",
-            "S7": "S7 Airlines",
-            "BA": "British Airways",
-            "TK": "Turkish Airlines"
+    "DeveloperPage": {
+        "initials": "Oleg Domnitskiy",
+        "qualification": "Frontend developer (react)",
+        "contacts": "Contacts",
+        "aboutTitle": "About me",
+        "aboutSubtitle": "I am a software engineer with a degree in IT. I have over 1 year of experience in commercial development and more than 10 years of experience as a system administrator. I am organized, a quick learner, and focused on solving specific tasks. Currently, I support and enhance more than 10 projects for the company. I am ambitious and ready for both team and individual work.",
+        "skills": "Skills",
+        "educationTitle": "Education",
+        "educationSubtitle": "Higher education, engineer",
+        "educationUniversity": "Information systems and technologies. DVGUPS, Khabarovsk 2003-2008",
+        "languages": "Languages",
+        "certificates": {
+            "title": "Certificates",
+            "diploma": "Diploma",
+            "personnel": "Personnel management",
+            "english": "English",
+            "finance": "Finance"
         },
-        "stops": {
-            "stop_zero": "Без пересадок",
-            "stop_one": "{{count}} пересадка",
-            "stop_few": "{{count}} пересадки",
-            "stop_many": "{{count}} перecадок",
-            "stop_other": "{{count}} пересадок"
-        }
-    },
-    "TicketsSettings": {
-        "currencyLabel": "Валюта",
-        "stopsLabel": "Количество пересадок",
-        "stops": {
-            "stop_zero": "Без пересадок",
-            "stop_one": "{{count}} пересадка",
-            "stop_few": "{{count}} пересадки",
-            "stop_many": "{{count}} перecадок",
-            "stop_other": "{{count}} пересадок",
-            "all": "Все"
+        "experience": "Experience",
+        "position": "Frontend developer",
+        "company": "Appomart LLC",
+        "period": "November 2023 - Present",
+        "projects": {
+            "appocore": {
+                "title": "Project “Appocore” - platform/Core for IT products",
+                "1": "implemented more than 10 data tables for 8 sections of the platform",
+                "2": "configured functionality for tables - pagination, sorting, filtering, search",
+                "3": "developed 5 detail pages for various entities",
+                "4": "implemented more than 10 modal windows for functionality (edit, add, delete)",
+                "5": "developed over 15 different forms with field validation",
+                "6": "implemented the 'JSON Translator' tool - integration with AI",
+                "7": "implemented the 'Text to Speech' tool - integration with voice providers",
+                "8": "created a drag & drop Kanban task board (synchronizes with backend)",
+                "stack": "stack: NextJS (app router), Redux, RTK Query, Mantine"
+            },
+            "orp": {
+                "title": "Project “ORP” - Orthopedic Research",
+                "1": "configured CI/CD for the project, set up server + nginx settings",
+                "2": "developed a section for adding/storing files with a tagging system",
+                "3": "implemented an interactive SVG picker (selects the injured area)",
+                "4": "developed a support section, interface for chatting with users",
+                "5": "implemented a branded QR code - adaptive component with dynamic value",
+                "6": "fully support the project and enhance new functionality",
+                "stack": "stack: NextJS (app router), Redux, RTK Query, Mantine"
+            },
+            "appomart": {
+                "title": "Project “Appomart” - landing page for 'APPOMART'",
+                "1": "Fully support and enhance the company's website",
+                "2": "Implemented a system for filtering articles by hashtags",
+                "3": "Developed the 'Portfolio' and 'Achievements' sections from scratch",
+                "4": "Reduced loading time for the 'Portfolio' section by 60% through pagination",
+                "5": "Completed over 30 tasks for responsive layout of various components",
+                "stack": "stack: NextJS (page router), Redux, RTK Query, Mantine"
+            },
+            "kod": {
+                "title": "Project “Source Code” - mobile app, Numerology",
+                "1": "Developed a caching system to save learning progress",
+                "2": "Implemented a custom, interactive SVG component (Learning Roadmap)",
+                "3": "Developed screens for 'Card Layout', 'Interpretations', 'Learning'",
+                "4": "Created over 15 interactive animated components",
+                "5": "Worked on rendering content based on the availability of a paid subscription",
+                "stack": "stack: Expo, React Native, Redux, RTK Query, Magnus"
+            }
         }
     }
 }
