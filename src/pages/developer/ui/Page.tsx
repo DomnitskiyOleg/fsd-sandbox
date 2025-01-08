@@ -48,12 +48,7 @@ export function DeveloperPage() {
                 onClick={onDownload}
                 color='primary'
                 aria-label='download'
-                sx={{
-                    position: 'sticky',
-                    top: 90,
-                    marginLeft: 'auto',
-                    right: 50,
-                }}
+                sx={styles.download}
             >
                 <DownloadOutlinedIcon fontSize='large' />
             </Fab>

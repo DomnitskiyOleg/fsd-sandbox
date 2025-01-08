@@ -7,6 +7,12 @@ const styles: Styles = {
         borderRadius: 0,
         my: 5,
     }),
+    download: {
+        position: 'sticky',
+        top: 90,
+        marginLeft: 'auto',
+        right: { xs: 20, sm: 24 },
+    },
     container: {
         position: 'relative',
         borderRadius: 3,
