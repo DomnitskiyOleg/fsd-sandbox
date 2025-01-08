@@ -28,8 +28,9 @@ export const SOCIALS = [
     },
     {
         name: 'domnitskiy.oleg@mail.ru',
-        link: 'https://www.linkedin.com/in/domnitskiy-oleg/',
+        link: 'domnitskiy.oleg@mail.ru',
         icon: <AiOutlineMail color='white' size={25} />,
+        isEmail: true,
     },
     {
         name: 'github.com/DomnitskiyOleg',

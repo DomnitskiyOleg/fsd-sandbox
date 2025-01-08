@@ -65,7 +65,12 @@ export function DeveloperPage() {
                                 <List>
                                     {SOCIALS.map((v) => (
                                         <ListItemButton
-                                            onClick={() => window.open(v.link)}
+                                            href={
+                                                v.isEmail
+                                                    ? `mailto:${v.link}`
+                                                    : v.link
+                                            }
+                                            target='_blank'
                                             key={v.name}
                                         >
                                             <Box
@@ -227,7 +232,7 @@ export function DeveloperPage() {
                                 p={2}
                                 pl={{ xs: 0, lg: 2 }}
                                 justifyContent='space-between'
-                                spacing={8}
+                                spacing={{ xs: 4, md: 8 }}
                                 sx={styles.block}
                             >
                                 <Typography
@@ -362,7 +367,7 @@ export function DeveloperPage() {
                                                 color='primary'
                                                 fontStyle='italic'
                                                 fontWeight={500}
-                                                ml={4}
+                                                ml={{ xs: 0, md: 4 }}
                                             >
                                                 {t(
                                                     `DeveloperPage.projects.${v.slug}.stack`,
