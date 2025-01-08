@@ -8,6 +8,7 @@ const styles: Styles = {
         my: 5,
     }),
     container: {
+        position: 'relative',
         borderRadius: 3,
         overflow: 'hidden',
         borderLeftWidth: 20,
