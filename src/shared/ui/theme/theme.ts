@@ -59,7 +59,7 @@ export const THEME = createTheme({
                 fontSize: '2rem',
             },
             '@media (max-width:400px)': {
-                fontSize: '1.5rem',
+                fontSize: '1.8rem',
             },
         },
         h4: {
@@ -68,7 +68,7 @@ export const THEME = createTheme({
                 fontSize: '1.8rem',
             },
             '@media (max-width:400px)': {
-                fontSize: '1.2rem',
+                fontSize: '1.5rem',
             },
         },
     },
