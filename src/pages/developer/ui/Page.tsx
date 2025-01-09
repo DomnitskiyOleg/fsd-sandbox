@@ -26,12 +26,17 @@ import styles from './styles'
 import { useDeviceQuery } from '@/shared/lib'
 import HorizontalRuleIcon from '@mui/icons-material/HorizontalRule'
 import DownloadOutlinedIcon from '@mui/icons-material/DownloadOutlined'
-import { useCallback } from 'react'
+import { useCallback, useRef } from 'react'
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
 
 export function DeveloperPage() {
     const { i18n, t } = useTranslation('developer')
     const { isMobile } = useDeviceQuery()
     const locale = i18n.language
+
+    const container = useRef(null)
+    const button = useRef(null)
 
     const onDownload = useCallback(() => {
         const link = document.createElement('a')
@@ -42,16 +47,32 @@ export function DeveloperPage() {
         document.body.removeChild(link)
     }, [locale])
 
+    useGSAP(
+        () => {
+            gsap.to(button.current, {
+                scale: 1.10,
+                duration: 0.6,
+                repeat: -1,
+                yoyo: true,
+            })
+        },
+        { scope: container },
+    )
+
     return (
         <>
-            <Fab
-                onClick={onDownload}
-                color='primary'
-                aria-label='download'
-                sx={styles.download}
-            >
-                <DownloadOutlinedIcon fontSize='large' />
-            </Fab>
+            <Box sx={styles.download} ref={container}>
+                <div ref={button}>
+                    <Fab
+                        onClick={onDownload}
+                        color='primary'
+                        aria-label='download'
+                    >
+                        <DownloadOutlinedIcon fontSize='large' />
+                    </Fab>
+                </div>
+            </Box>
+
             <Container sx={{ marginTop: 4 }} maxWidth='lg'>
                 <Paper elevation={4} sx={styles.container}>
                     <Card elevation={5} sx={styles.header}>

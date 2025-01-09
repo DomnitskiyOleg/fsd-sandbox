@@ -8,10 +8,10 @@ const styles: Styles = {
         my: 5,
     }),
     download: {
-        position: 'sticky',
+        position: 'fixed',
         top: 90,
-        marginLeft: 'auto',
         right: { xs: 20, sm: 24 },
+        zIndex: 1,
     },
     container: {
         position: 'relative',
