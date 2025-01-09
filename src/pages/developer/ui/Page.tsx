@@ -50,9 +50,10 @@ export function DeveloperPage() {
     useGSAP(
         () => {
             gsap.to(button.current, {
-                scale: 1.2,
-                duration: 1.4,
+                scale: 1.10,
+                duration: 0.6,
                 repeat: -1,
+                yoyo: true,
             })
         },
         { scope: container },
