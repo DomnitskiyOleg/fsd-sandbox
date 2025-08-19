@@ -50,6 +50,9 @@ export const SKILLS = [
     row: ['Redux', 'Redux Toolkit', 'RTK Query'],
   },
   {
+    row: ['Tanstack', 'React Query', 'Zod', 'Formik'],
+  },
+  {
     row: ['HTML', 'CSS', 'PostCSS', 'SASS'],
   },
   {
