@@ -3,10 +3,11 @@
     "drawer": {
         "home": "Home",
         "tasks": "Tasks",
-        "settings": "Settings",
+        "settings": "Settings (404)",
         "about": "About",
         "developer": "Developer",
-        "tickets": "Air tickets"
+        "tickets": "Air tickets",
+        "users": "Users"
     },
     "components": {
         "ContactCard": {
@@ -28,9 +29,14 @@
         }
     },
     "actions": {
-        "logout": "Logout"
+        "logout": "Logout",
+        "affirm": "Affirm",
+        "cancel": "Cancel",
+        "save": "Save"
     },
     "validation": {
-        "required": "Required field"
+        "required": "Required field",
+        "invalid": "Invalid format",
+        "minLength": "Minimum number of characters: {{count}}"
     }
 }

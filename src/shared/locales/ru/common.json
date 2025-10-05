@@ -3,10 +3,11 @@
     "drawer": {
         "home": "Главная",
         "tasks": "Задачи",
-        "settings": "Настройки",
+        "settings": "Настройки (404)",
         "about": "О проекте",
         "developer": "Разработчик",
-        "tickets": "Авиабилеты"
+        "tickets": "Авиабилеты",
+        "users": "Пользователи"
     },
     "components": {
         "ContactCard": {
@@ -28,9 +29,14 @@
         }
     },
     "actions": {
-        "logout": "Выйти"
+        "logout": "Выйти",
+        "affirm": "Подтверждаю",
+        "cancel": "Отмена",
+        "save": "Сохранить"
     },
     "validation": {
-        "required": "Обязательное поле"
+        "required": "Обязательное поле",
+        "invalid": "Некорректный формат",
+        "minLength": "Минимальное количество символов: {{count}}"
     }
 }

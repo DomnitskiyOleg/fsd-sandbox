@@ -1,0 +1,13 @@
+{
+    "DeleteModal": {
+        "title": "Confirmation",
+        "text": "Are you sure you want to delete this user?",
+        "successMessage": "User ID: [{{id}}] has been successfully deleted."
+    },
+    "ManageUserModal": {
+        "createTitle": "Create User",
+        "updateTitle": "Update User",
+        "createSuccessMessage": "User has been successfully created",
+        "updateSuccessMessage": "User data has been successfully saved"
+    }
+}

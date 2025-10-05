@@ -1,0 +1,9 @@
+{
+    "fields": {
+        "id": "ID",
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "role": "Role"
+    }
+}
