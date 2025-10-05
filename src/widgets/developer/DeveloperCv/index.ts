@@ -1,0 +1,1 @@
+export { DeveloperCv } from './ui'
