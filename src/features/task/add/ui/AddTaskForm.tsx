@@ -69,11 +69,7 @@ export function AddTaskForm() {
                                 })}
                                 name='name'
                                 error={!!errors.name}
-                                helperText={
-                                    errors.name
-                                        ? commonT('validation.required')
-                                        : undefined
-                                }
+                                helperText={errors.name ? commonT('validation.required') : undefined}
                                 label={t('AddTaskForm.nameLabel')}
                             />
                         </Grid>
