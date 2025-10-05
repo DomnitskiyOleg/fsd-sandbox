@@ -22,7 +22,7 @@ export default async () => {
             ns: ['common', 'tasks', 'tickets', 'developer', 'users', 'users-common', 'user-details'], // namespaces (can set [])
             defaultNS: 'common',
             backend: {
-                loadPath: 'static/locales/{{lng}}/{{ns}}.json',
+                loadPath: '/static/locales/{{lng}}/{{ns}}.json',
             },
         })
 }
