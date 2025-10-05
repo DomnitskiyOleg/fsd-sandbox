@@ -1,4 +1,3 @@
-export { default as ticketsReducer } from './model/slice'
-export { selectTickets } from './model/slice'
-export { Carrier } from './model/types'
-export {TicketCard} from './ui/TicketCard'
+export { default as ticketsReducer } from './model/'
+export { selectTickets, Carrier } from './model'
+export { TicketCard } from './ui/TicketCard'

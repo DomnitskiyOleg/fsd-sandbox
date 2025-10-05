@@ -16,7 +16,7 @@ export const ticketsSlice = createSlice({
     },
 })
 
-export default ticketsSlice.reducer
+export const reducer = ticketsSlice.reducer
 
 export const selectTickets = (state: { tickets: TicketsState }) =>
     state.tickets.tickets
