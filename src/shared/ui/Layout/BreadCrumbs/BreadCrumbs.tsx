@@ -37,13 +37,21 @@ export default function NavbarBreadcrumbs() {
             </NavLink>
             {breadcrumbs
                 .filter((v) => v.length)
-                .map((v, i) => (
-                    <NavLink key={`${v}-${i}`} to={`/${v}`}>
-                        <Typography textTransform='capitalize' fontWeight={600} variant='body1' color='white'>
-                            {isEntityRead && v === lastPath ? label : t(`drawer.${v}`)}
-                        </Typography>
-                    </NavLink>
-                ))}
+                .map((v, i, self) => {
+                    const isLast = i === self.length - 1
+                    return (
+                        <NavLink key={`${v}-${i}`} to={isLast ? pathname : `/${v}`}>
+                            <Typography
+                                textTransform='capitalize'
+                                fontWeight={600}
+                                variant='body1'
+                                color='white'
+                            >
+                                {isEntityRead && v === lastPath ? label : t(`drawer.${v}`)}
+                            </Typography>
+                        </NavLink>
+                    )
+                })}
         </StyledBreadcrumbs>
     )
 }
