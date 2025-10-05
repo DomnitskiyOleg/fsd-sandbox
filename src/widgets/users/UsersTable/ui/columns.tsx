@@ -5,7 +5,7 @@ import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye'
 import { useTranslation } from 'react-i18next'
 import { DeleteModalRef, ManageUserModalRef } from '@/features/user'
 import { formatPhoneForGrid } from '../helpers'
-import { Badge, Chip, type ChipOwnProps, colors } from '@mui/material'
+import { Chip, type ChipOwnProps } from '@mui/material'
 
 const chipColors: Record<UserRole, ChipOwnProps['color']> = {
     [UserRole.Admin]: 'info',

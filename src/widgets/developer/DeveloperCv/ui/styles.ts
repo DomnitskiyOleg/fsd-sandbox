@@ -2,7 +2,7 @@ import { Styles } from '@/shared/types'
 import { grey } from '@mui/material/colors'
 
 const styles: Styles = {
-    header: (theme) => ({
+    header: () => ({
         p: 2,
         borderRadius: 0,
         my: 5,
@@ -25,14 +25,10 @@ const styles: Styles = {
         borderLeftColor: 'primary.main',
     },
     column: (theme) => ({
-        borderRight: `1px solid ${
-            theme.palette.mode === 'dark' ? grey[700] : grey[300]
-        }`,
+        borderRight: `1px solid ${theme.palette.mode === 'dark' ? grey[700] : grey[300]}`,
     }),
     block: (theme) => ({
-        borderBottom: `1px solid ${
-            theme.palette.mode === 'dark' ? grey[700] : grey[300]
-        }`,
+        borderBottom: `1px solid ${theme.palette.mode === 'dark' ? grey[700] : grey[300]}`,
     }),
 }
 

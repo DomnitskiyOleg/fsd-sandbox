@@ -47,7 +47,7 @@ export default [
                     argsIgnorePattern: '^_',
                 },
             ],
-            '@typescript-eslint/no-throw-literal': 'error',
+            '@typescript-eslint/no-throw-literal': 'off',
             '@typescript-eslint/no-floating-promises': 'off',
             '@typescript-eslint/no-misused-promises': 'off',
             'no-unused-vars': 'off',

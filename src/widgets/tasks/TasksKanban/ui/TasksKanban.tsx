@@ -1,10 +1,5 @@
-import { Box, Container, Stack } from '@mui/material'
-import {
-    DragDropContext,
-    Droppable,
-    Draggable,
-    DropResult,
-} from '@hello-pangea/dnd'
+import { Box, Stack } from '@mui/material'
+import { DragDropContext, Droppable, Draggable } from '@hello-pangea/dnd'
 import { useSelector } from 'react-redux'
 
 import { useMemo } from 'react'
@@ -26,13 +21,11 @@ export function TasksKanban() {
         }
 
         Object.values(TaskStatus).forEach((status) => {
-            res[status] = [...tasks.filter((v) => v.status === status)].sort(
-                (a, b) => {
-                    if (a.position > b.position) return 1
-                    if (a.position < b.position) return -1
-                    return 0
-                },
-            )
+            res[status] = [...tasks.filter((v) => v.status === status)].sort((a, b) => {
+                if (a.position > b.position) return 1
+                if (a.position < b.position) return -1
+                return 0
+            })
         })
 
         return res
@@ -41,13 +34,8 @@ export function TasksKanban() {
     return (
         <ScrollContainer>
             <DragDropContext onDragEnd={() => {}}>
-                <Stack
-                    flexDirection='row'
-                    minWidth={900}
-                    sx={{ overflow: 'auto' }}
-                    gap={1}
-                >
-                    {STATUSES.map((v, i) => (
+                <Stack flexDirection='row' minWidth={900} sx={{ overflow: 'auto' }} gap={1}>
+                    {STATUSES.map((v) => (
                         <Box key={v} flex={1} position='relative'>
                             <Stack key={v} flexDirection='column'>
                                 <Box
@@ -69,33 +57,24 @@ export function TasksKanban() {
                                                 backgroundColor: 'blue',
                                             }}
                                         >
-                                            {filteredTasks[v].map(
-                                                (task, index) => (
-                                                    <Draggable
-                                                        key={task.id}
-                                                        draggableId={task.id}
-                                                        index={index}
-                                                        isDragDisabled={false}
-                                                    >
-                                                        {(
-                                                            provided,
-                                                            snapshot,
-                                                        ) => (
-                                                            <div
-                                                                ref={
-                                                                    provided.innerRef
-                                                                }
-                                                                {...provided.draggableProps}
-                                                                {...provided.dragHandleProps}
-                                                            >
-                                                                <TaskCard
-                                                                    task={task}
-                                                                />
-                                                            </div>
-                                                        )}
-                                                    </Draggable>
-                                                ),
-                                            )}
+                                            {filteredTasks[v].map((task, index) => (
+                                                <Draggable
+                                                    key={task.id}
+                                                    draggableId={task.id}
+                                                    index={index}
+                                                    isDragDisabled={false}
+                                                >
+                                                    {(provided) => (
+                                                        <div
+                                                            ref={provided.innerRef}
+                                                            {...provided.draggableProps}
+                                                            {...provided.dragHandleProps}
+                                                        >
+                                                            <TaskCard task={task} />
+                                                        </div>
+                                                    )}
+                                                </Draggable>
+                                            ))}
                                             {providedDrop.placeholder}
                                         </div>
                                     )}

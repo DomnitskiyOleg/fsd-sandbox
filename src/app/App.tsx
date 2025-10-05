@@ -1,4 +1,4 @@
-import { ThemeProvider, CssBaseline, IconButton } from '@mui/material'
+import { ThemeProvider, CssBaseline } from '@mui/material'
 import { THEME } from '@/shared/ui'
 import { RouterProvider } from 'react-router-dom'
 import router from './router'
@@ -7,16 +7,16 @@ import { store } from './store'
 import { SnackbarProvider } from './providers'
 
 function App() {
-  return (
-    <StoreProvider store={store}>
-      <ThemeProvider theme={THEME} defaultMode='light'>
-        <SnackbarProvider>
-          <CssBaseline />
-          <RouterProvider router={router} />
-        </SnackbarProvider>
-      </ThemeProvider>
-    </StoreProvider>
-  )
+    return (
+        <StoreProvider store={store}>
+            <ThemeProvider theme={THEME} defaultMode='light'>
+                <SnackbarProvider>
+                    <CssBaseline />
+                    <RouterProvider router={router} />
+                </SnackbarProvider>
+            </ThemeProvider>
+        </StoreProvider>
+    )
 }
 
 export default App

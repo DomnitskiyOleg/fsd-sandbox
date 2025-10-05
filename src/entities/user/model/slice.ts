@@ -1,5 +1,5 @@
-import { createSlice, createAction, nanoid } from '@reduxjs/toolkit'
-import { IUser, UserRole } from './types'
+import { createSlice, createAction } from '@reduxjs/toolkit'
+import { IUser } from './types'
 import { uniqId } from '@/shared/lib'
 import { MOCK_USERS } from '../constants'
 type UsersState = {
