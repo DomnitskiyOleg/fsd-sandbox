@@ -38,5 +38,8 @@
         "required": "Required field",
         "invalid": "Invalid format",
         "minLength": "Minimum number of characters: {{count}}"
+    },
+    "entitiesReadNames": {
+        "users": "User #{{id}}"
     }
 }

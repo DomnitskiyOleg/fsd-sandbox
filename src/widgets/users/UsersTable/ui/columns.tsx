@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next'
 import { DeleteModalRef, ManageUserModalRef } from '@/features/user'
 import { formatPhoneForGrid } from '../helpers'
 import { Chip, type ChipOwnProps } from '@mui/material'
+import { Link } from 'react-router-dom'
 
 const chipColors: Record<UserRole, ChipOwnProps['color']> = {
     [UserRole.Admin]: 'info',
@@ -56,14 +57,15 @@ export const useColumns = () => {
             hideSortIcons: true,
             getActions: (v) => [
                 <GridActionsCellItem
+                    key='read'
                     color='primary'
                     showInMenu={false}
-                    key='read'
-                    icon={<RemoveRedEyeIcon fontSize='small' />}
+                    icon={
+                        <Link to={`/users/${v.id}`} style={{ color: 'inherit', textDecoration: 'none' }}>
+                            <RemoveRedEyeIcon fontSize='small' />
+                        </Link>
+                    }
                     label='read'
-                    onClick={() => {
-                        console.log(v)
-                    }}
                 />,
                 <GridActionsCellItem
                     color='primary'
