@@ -16,7 +16,7 @@ type Props = {
   switchThemeSlot?: ReactNode
   switchLanguageSlot?: ReactNode
   sideMenuMobileSlot?: ReactNode
-  toggleDrawer?: (newState: boolean) => () => void
+  toggleDrawer?: (_newState: boolean) => () => void
 }
 
 export function AppNavbarBase(props: Props) {

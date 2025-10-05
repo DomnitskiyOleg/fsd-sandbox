@@ -13,57 +13,54 @@ import { useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { NavLink } from '../NavLink/NavLink'
 import AirplaneTicketRoundedIcon from '@mui/icons-material/AirplaneTicketRounded'
-
+import GroupIcon from '@mui/icons-material/Group'
 const mainListItems = [
-    { path: '/', name: 'home', icon: <HomeRoundedIcon /> },
-    { path: '/tasks', name: 'tasks', icon: <AssignmentRoundedIcon /> },
-    { path: '/tickets', name: 'tickets', icon: <AirplaneTicketRoundedIcon /> },
+  { path: '/', name: 'home', icon: <HomeRoundedIcon /> },
+  { path: '/tasks', name: 'tasks', icon: <AssignmentRoundedIcon /> },
+  { path: '/users', name: 'users', icon: <GroupIcon /> },
+  { path: '/tickets', name: 'tickets', icon: <AirplaneTicketRoundedIcon /> },
 ]
 
 const secondaryListItems = [
-    { path: '/settings', name: 'settings', icon: <SettingsRoundedIcon /> },
-    { path: '/about', name: 'about', icon: <InfoRoundedIcon /> },
-    {
-        path: '/developer',
-        name: 'developer',
-        icon: <LightbulbCircleRoundedIcon />,
-    },
+  { path: '/settings', name: 'settings', icon: <SettingsRoundedIcon /> },
+  { path: '/about', name: 'about', icon: <InfoRoundedIcon /> },
+  {
+    path: '/developer',
+    name: 'developer',
+    icon: <LightbulbCircleRoundedIcon />,
+  },
 ]
 
 export default function MenuContent() {
-    const { pathname } = useLocation()
-    const { t } = useTranslation('common')
-    return (
-        <Stack sx={{ flexGrow: 1, p: 1, justifyContent: 'space-between' }}>
-            <List dense>
-                {mainListItems.map((v, index) => (
-                    <NavLink key={`${v.path} + ${index}`} to={v.path}>
-                        <ListItem disablePadding sx={{ display: 'block' }}>
-                            <ListItemButton selected={v.path === pathname}>
-                                <ListItemIcon>{v.icon}</ListItemIcon>
-                                <ListItemText primary={t(`drawer.${v.name}`)} />
-                            </ListItemButton>
-                        </ListItem>
-                    </NavLink>
-                ))}
-            </List>
+  const { pathname } = useLocation()
+  const { t } = useTranslation('common')
+  return (
+    <Stack sx={{ flexGrow: 1, p: 1, justifyContent: 'space-between' }}>
+      <List dense>
+        {mainListItems.map((v, index) => (
+          <NavLink key={`${v.path} + ${index}`} to={v.path}>
+            <ListItem disablePadding sx={{ display: 'block' }}>
+              <ListItemButton selected={v.path === pathname}>
+                <ListItemIcon>{v.icon}</ListItemIcon>
+                <ListItemText primary={t(`drawer.${v.name}`)} />
+              </ListItemButton>
+            </ListItem>
+          </NavLink>
+        ))}
+      </List>
 
-            <List dense>
-                {secondaryListItems.map((v, index) => (
-                    <NavLink key={`${v.path} + ${index}`} to={v.path}>
-                        <ListItem
-                            key={index}
-                            disablePadding
-                            sx={{ display: 'block' }}
-                        >
-                            <ListItemButton selected={v.path === pathname}>
-                                <ListItemIcon>{v.icon}</ListItemIcon>
-                                <ListItemText primary={t(`drawer.${v.name}`)} />
-                            </ListItemButton>
-                        </ListItem>
-                    </NavLink>
-                ))}
-            </List>
-        </Stack>
-    )
+      <List dense>
+        {secondaryListItems.map((v, index) => (
+          <NavLink key={`${v.path} + ${index}`} to={v.path}>
+            <ListItem key={index} disablePadding sx={{ display: 'block' }}>
+              <ListItemButton selected={v.path === pathname}>
+                <ListItemIcon>{v.icon}</ListItemIcon>
+                <ListItemText primary={t(`drawer.${v.name}`)} />
+              </ListItemButton>
+            </ListItem>
+          </NavLink>
+        ))}
+      </List>
+    </Stack>
+  )
 }
