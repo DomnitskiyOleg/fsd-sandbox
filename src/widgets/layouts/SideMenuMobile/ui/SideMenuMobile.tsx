@@ -32,7 +32,7 @@ export function SideMenuMobile(props: Props) {
                         <Avatar
                             sizes='small'
                             alt={t('developer')}
-                            src='/assets/ava.png'
+                     
                             sx={styles.avatar}
                         />
                         <Typography

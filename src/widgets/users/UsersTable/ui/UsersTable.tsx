@@ -13,7 +13,7 @@ const PAGE_SIZE_OPTIONS = [5, 10, 15]
 export function UsersTable() {
     const [paginationModel, setPaginationModel] = useState<GridPaginationModel>({
         page: 0,
-        pageSize: 5,
+        pageSize: 10,
     })
 
     const users = useGetUsers()

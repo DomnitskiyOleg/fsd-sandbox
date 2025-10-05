@@ -31,7 +31,7 @@ export default createBrowserRouter([
                 element: <UsersPage />,
             },
             {
-                path: 'users/:id',
+                path: '/users/:id',
                 element: <UserPage />,
             },
             {

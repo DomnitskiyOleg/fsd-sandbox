@@ -1,0 +1,8 @@
+{
+    "UserCard": {
+        "title": "User #{{id}}",
+        "baseDate": {
+            "title": "Base Data"
+        }
+    }
+}

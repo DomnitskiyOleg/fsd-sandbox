@@ -32,7 +32,8 @@
         "logout": "Logout",
         "affirm": "Affirm",
         "cancel": "Cancel",
-        "save": "Save"
+        "save": "Save",
+        "back": "Go back"
     },
     "validation": {
         "required": "Required field",
