@@ -1,4 +1,4 @@
-import { TicketsGrid } from '@/widgets/TicketsGrid'
+import { TicketsGrid } from '@/widgets/tickets'
 
 export function TicketsPage() {
     return <TicketsGrid />

@@ -1,6 +1,5 @@
 import { AddTaskForm } from '@/features/task/add'
-import { TasksGrid } from '@/widgets/TasksGrid'
-import { TasksKanban } from '@/widgets/TasksKanban/ui/TasksKanban'
+import { TasksGrid } from '@/widgets/tasks'
 
 export function TasksPage() {
     return (
