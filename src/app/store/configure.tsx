@@ -5,6 +5,7 @@ import { ticketsReducer } from '@/entities/ticket'
 import { filterReducer as tasksFilter } from '@/features/task/filter'
 import preloadState from './preloadState'
 import { ticketSettingsReducer } from '@/features/ticket/settings'
+import { usersReducer } from '@/entities/user'
 
 export const store = configureStore({
     reducer: {
@@ -12,6 +13,7 @@ export const store = configureStore({
         ticketsSettings: ticketSettingsReducer,
         tasks: tasksReducer,
         tasksfilter: tasksFilter,
+        users: usersReducer,
     },
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware().concat(middleware),

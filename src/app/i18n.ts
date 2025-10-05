@@ -1,6 +1,5 @@
 import i18n from 'i18next'
 import Backend from 'i18next-http-backend'
-import LanguageDetector from 'i18next-browser-languagedetector'
 import { initReactI18next } from 'react-i18next'
 
 export default async () => {
@@ -10,7 +9,8 @@ export default async () => {
         .use(Backend)
         // detect user language
         // learn more: https://github.com/i18next/i18next-browser-languageDetector
-        .use(LanguageDetector)
+        // TODO add languages aliases support
+        // .use(LanguageDetector)
         // pass the i18n instance to react-i18next.
         .use(initReactI18next)
         // init i18next
@@ -19,7 +19,7 @@ export default async () => {
             fallbackLng: 'en',
             debug: true,
             preload: ['en', 'ru'],
-            ns: ['common', 'tasks', 'tickets', 'developer'], // namespaces (can set [])
+            ns: ['common', 'tasks', 'tickets', 'developer', 'users', 'users-common'], // namespaces (can set [])
             defaultNS: 'common',
             backend: {
                 loadPath: 'static/locales/{{lng}}/{{ns}}.json',
