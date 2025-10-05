@@ -40,8 +40,14 @@ export default [
             semi: 'off',
             'react/react-in-jsx-scope': 'off',
             'import/extensions': 'off',
-            '@typescript-eslint/no-unused-vars': 'off',
-            '@typescript-eslint/no-throw-literal': 'off',
+            '@typescript-eslint/no-unused-vars': [
+                'error',
+                {
+                    varsIgnorePattern: '^_',
+                    argsIgnorePattern: '^_',
+                },
+            ],
+            '@typescript-eslint/no-throw-literal': 'error',
             '@typescript-eslint/no-floating-promises': 'off',
             '@typescript-eslint/no-misused-promises': 'off',
             'no-unused-vars': 'off',
