@@ -50,18 +50,11 @@ yarn start
 ```
 
 ## Demonstration
-<<<<<<< HEAD
-=======
 
->>>>>>> dev
 ![upjet](https://github.com/user-attachments/assets/fc0eed88-b29d-427b-a9cd-8975a5fc9c68)
 ![tickets1](https://github.com/user-attachments/assets/f6dfe749-87b9-48ef-a1c0-2335bddf40bc)
 ![tickets2](https://github.com/user-attachments/assets/d019e06e-7adc-49cf-b699-dc85b80ad848)
 
-<<<<<<< HEAD
-
-=======
->>>>>>> dev
 ---
 
 ### Deploy link
