@@ -1,16 +1,21 @@
 # FSD SANDBOX
 
-## Demonstration
-![tickets1](https://github.com/user-attachments/assets/f6dfe749-87b9-48ef-a1c0-2335bddf40bc)
-![tickets2](https://github.com/user-attachments/assets/d019e06e-7adc-49cf-b699-dc85b80ad848)
+## Для компании Upjet
 
----
+### Тестовое задание для компании Upjet (Таблица пользователей) интегрировано в платформу FSD Sandbox.
 
-### Deploy link
+### Реализована работа с пользователями в соответствии с заданием
 
-https://fsd-sandbox.vercel.app/
+Используемые библиотеки
 
----
+-   FSD архитектура
+-   React
+-   MUI
+-   ZOD
+-   i18next
+-   @mui/x-data-grid
+
+Краткое описания платформы: FSD Sandbox предназначена для изучения и применения новых технологий, архитектур, подходов и библиотек, используется в том числе для выполнения тестовых заданий и демонстрации навыков разработчика
 
 ### To install
 
@@ -42,6 +47,19 @@ or
 ```
 yarn start
 ```
+
+## Demonstration
+
+![tickets1](https://github.com/user-attachments/assets/f6dfe749-87b9-48ef-a1c0-2335bddf40bc)
+![tickets2](https://github.com/user-attachments/assets/d019e06e-7adc-49cf-b699-dc85b80ad848)
+
+---
+
+### Deploy link
+
+https://fsd-sandbox.vercel.app/
+
+---
 
 ## About
 
