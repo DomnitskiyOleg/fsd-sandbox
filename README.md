@@ -20,6 +20,8 @@
 
 ### To install
 
+## node version 22 required
+
 ```
 git clone https://github.com/DomnitskiyOleg/fsd-sandbox.git
 
