@@ -3,6 +3,8 @@
         "title": "User #{{id}}",
         "baseDate": {
             "title": "Base Data"
-        }
+        },
+        "notFound": "User not found",
+        "backButton": "To Users"
     }
 }

@@ -11,6 +11,7 @@ import { useGetUserDetails } from '../../hooks'
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace'
 import { useTranslation } from 'react-i18next'
 import { styles } from './styles'
+import { UserNotFound } from './UserNotFound'
 
 export function UserCard() {
     const { id } = useParams<{ id: string }>()
@@ -20,7 +21,7 @@ export function UserCard() {
 
     if (!id) return null
     const user = useGetUserDetails({ id: parseInt(id, 10) })
-    if (!user) return <div>Пользователь не найден</div>
+    if (!user) return <UserNotFound />
 
     return (
         <Container sx={{ mt: 4 }} maxWidth='xl'>
