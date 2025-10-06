@@ -31,3 +31,11 @@ export const tableStyles: CSSProperties = {
     borderTopRightRadius: 0,
     borderTopLeftRadius: 0,
 }
+
+export const linkStyles: CSSProperties = {
+    color: 'inherit',
+    textDecoration: 'none',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+}

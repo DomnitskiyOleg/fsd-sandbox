@@ -7,6 +7,7 @@ import { DeleteModalRef, ManageUserModalRef } from '@/features/user'
 import { formatPhoneForGrid } from '../helpers'
 import { Chip, type ChipOwnProps } from '@mui/material'
 import { Link } from 'react-router-dom'
+import { linkStyles } from './styles'
 
 const chipColors: Record<UserRole, ChipOwnProps['color']> = {
     [UserRole.Admin]: 'info',
@@ -61,7 +62,7 @@ export const useColumns = () => {
                     color='primary'
                     showInMenu={false}
                     icon={
-                        <Link to={`/users/${v.id}`} style={{ color: 'inherit', textDecoration: 'none' }}>
+                        <Link to={`/users/${v.id}`} style={linkStyles}>
                             <RemoveRedEyeIcon fontSize='small' />
                         </Link>
                     }
